@@ -1,0 +1,127 @@
+#intro {
+    height: 100%;
+    background-color: #141414;
+}
+
+#introduction {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 120px;
+    margin-bottom: 120px;
+}
+
+#introduction > div:nth-child(1) {
+    position: relative;
+    width: 480px;
+}
+
+#introduction > div:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 120px;
+    height: 0px;
+    border: #005298 solid 2px;
+    border-radius: 1px;
+}
+
+#name_en {
+    color: #aaaaaa;
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: 24px;
+}
+
+#name {
+    color: #eeeeee;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+#desc_main {
+    color: #eeeeee;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 36px auto;
+}
+
+#desc_detail {
+    color: #aaaaaa;
+    line-height: 1.6em;
+}
+
+#promo {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+
+#promo_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#promo_bg_cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#141414+0,141414+100&1+0,0.8+20,0.8+80,1+100 */
+    background: -moz-linear-gradient(top,  rgba(20,20,20,1) 0%, rgba(20,20,20,0.8) 20%, rgba(20,20,20,0.8) 80%, rgba(20,20,20,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(20,20,20,1) 0%,rgba(20,20,20,0.8) 20%,rgba(20,20,20,0.8) 80%,rgba(20,20,20,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(20,20,20,1) 0%,rgba(20,20,20,0.8) 20%,rgba(20,20,20,0.8) 80%,rgba(20,20,20,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#141414', endColorstr='#141414',GradientType=0 ); /* IE6-9 */
+}
+
+#promo_contents {
+    display: flex;
+    width: 1200px;
+    margin: 0px auto;
+    margin-top: 120px;
+}
+
+#promo_video {
+    margin-right: 64px;
+}
+
+#promo_desc {
+    flex: 1;
+    position: relative;
+    height: 405.63px;
+}
+
+#promo_desc > div {
+    position: absolute;
+    bottom: 0px;
+}
+
+#promo_desc > div > div > div {
+    display: inline-block;
+    width: 49%;
+}
+
+.promo_number {
+    color: #005298;
+    font-size: 64px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.promo_number_desc {
+    color: #eeeeee;
+    text-align: center;
+    font-size: 24px;
+}
+
+#promo_desc > div > h3 {
+    margin-top: 64px;
+    font-size: 16px;
+    color: #aaaaaa;
+    line-height: 2em;
+}

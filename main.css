@@ -1,0 +1,90 @@
+html, body {
+    position: relative;
+    height: 100%;
+    margin: 0px;
+}
+
+#main {
+    position: relative;
+    height: 105%;
+}
+
+#bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#bg_cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#141414+0,141414+100&0+70,0.5+100 */
+background: -moz-linear-gradient(top,  rgba(20,20,20,0) 0%, rgba(20,20,20,0) 70%, rgba(20,20,20,0.5) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(20,20,20,0) 0%,rgba(20,20,20,0) 70%,rgba(20,20,20,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(20,20,20,0) 0%,rgba(20,20,20,0) 70%,rgba(20,20,20,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00141414', endColorstr='#80141414',GradientType=0 ); /* IE6-9 */
+
+}
+
+#summary_info {
+    position: absolute;
+    bottom: 128px;
+    left: 128px;
+}
+
+#thumbnail {
+    position: relative;
+    width: 512px;
+    margin-bottom: 24px;
+}
+
+#emblem {
+    position: absolute;
+    bottom:0px;
+    right: 0px;
+    width: 128px;
+    opacity: 0.2;
+}
+
+#button_homepage{
+    width: 240px;
+    height: 48px;
+    background-color: #005298;
+    margin-right: 24px;
+}
+
+#button_onlineclass{
+    width: 272px;
+    height: 44px;
+    border: #005298 solid 2px;
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.button > div {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 32px;
+}
+
+.button img{
+    height: 100%;
+    margin-right: 16px;
+}
+
+.button h3{
+    line-height: 32px;
+    font-size: 16px;
+    color: #eeeeee;
+    white-space:nowrap;
+}
