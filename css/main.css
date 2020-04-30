@@ -6,7 +6,7 @@ html, body {
 
 #main {
     position: relative;
-    height: 105%;
+    height: 100%;
 }
 
 #bg {
@@ -29,36 +29,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00141414', e
 
 }
 
-#summary_info {
+#main_section {
     position: absolute;
-    bottom: 128px;
-    left: 128px;
+    bottom: 256px;
+    left: 256px;
 }
 
-#thumbnail {
-    position: relative;
-    width: 512px;
-    margin-bottom: 24px;
-}
-
-#emblem {
-    position: absolute;
-    bottom:0px;
-    right: 0px;
-    width: 128px;
-    opacity: 0.2;
+#main_logo {
+    display: block;
+    margin-bottom: 36px;
 }
 
 #button_homepage{
-    width: 240px;
-    height: 48px;
+    width: 320px;
+    height: 72px;
     background-color: #005298;
     margin-right: 24px;
 }
 
 #button_onlineclass{
-    width: 272px;
-    height: 44px;
+    width: 360px;
+    height: 68px;
     border: #005298 solid 2px;
 }
 
@@ -74,17 +65,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00141414', e
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 32px;
 }
 
 .button img{
-    height: 100%;
-    margin-right: 16px;
+    height: 32px;
+    margin-right: 24px;
 }
 
 .button h3{
     line-height: 32px;
-    font-size: 16px;
+    font-size: 24px;
     color: #eeeeee;
     white-space:nowrap;
 }

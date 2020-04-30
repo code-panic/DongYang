@@ -3,7 +3,7 @@
     background-color: #141414;
 }
 
-#introduction {
+#intro_section {
     display: flex;
     width: 1200px;
     margin: 0 auto;
@@ -11,12 +11,12 @@
     margin-bottom: 120px;
 }
 
-#introduction > div:nth-child(1) {
+#intro_section > div:nth-child(1) {
     position: relative;
     width: 480px;
 }
 
-#introduction > div:nth-child(1)::before {
+#intro_section > div:nth-child(1)::before {
     content: "";
     position: absolute;
     left: 0px;
@@ -29,14 +29,14 @@
 
 #name_en {
     color: #aaaaaa;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 100;
-    margin-bottom: 24px;
+    margin-bottom: 48px;
 }
 
 #name {
     color: #eeeeee;
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 700;
 }
 

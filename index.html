@@ -3,43 +3,43 @@
     <title>동양미래대학교 홈페이지</title>
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="intro.css">
-    <link rel="stylesheet" href="major.css">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/intro.css">
+    <link rel="stylesheet" href="./css/major.css">
+    <link rel="stylesheet" href="./css/reset.css">
 </head>
 <body>
     <div id="main"> 
-        <img id="bg" src="bg.jpg"/>
+        <img id="bg" src="./img/main_bg.jpg"/>
         <div id="bg_cover"></div>
 
-        <div id="summary_info">
-            <div id="thumbnail">
-                <img id="logo" src="logo.png"/>
-                <img id="emblem" src="emblem.png">
-            </div>
+        <section id="main_section">
+            <img id="main_logo" width="512" src="./img/logo.png"/>
 
             <a href="https://www.dongyang.ac.kr/web/www" target="blank">
                 <div id="button_homepage" class="button">
                     <div>
-                        <img src="icon_homepage.png"> 
+                        <img src="./img/icon_homepage.png"> 
                         <h3>홈페이지 바로가기</h3>
                     </div>
                 </div>
+            </a>
  
             <a href="https://cyber.dongyang.ac.kr/index.jsp" target="blank">
                 <div id="button_onlineclass" class ="button">
                     <div>
-                        <img src="icon_onlineclass.png"> 
+                        <img src="./img/icon_onlineclass.png"> 
                         <h3>온라인수업 바로가기</h3>
                     </div>
                 </div>
             </a>
-        </div>
+        </section>
     </div>
 
     <div id="intro">
-        <section id="introduction">
+        <h2>소개</h2>
+
+        <section id="intro_section">
             <div>
                 <h2 id="name_en">DONGYANG MIRAE UNIVERSITY</h2>
                 <h1 id="name">동양미래대학교</h1>
@@ -57,12 +57,12 @@
         </section>
 
         <div id="promo">
-            <img id="promo_bg" src="promo_bg.jpg" />
+            <img id="promo_bg" src="./img/promo_bg.jpg" />
             <div id="promo_bg_cover">
             
             <div id="promo_contents">
                 <video id="promo_video" width="720" autoplay controls>
-                    <source src="promo_video.mp4" type="video/mp4">
+                    <source src="./video/promo_video.mp4" type="video/mp4">
                 </video>
 
                 <div id="promo_desc">
@@ -72,7 +72,7 @@
                                 <h2 class="promo_number">6018</h2>
                                 <h3 class="promo_number_desc">students</h3>
                             </div>
-
+ 
                             <div>
                                 <h2 class="promo_number">164</h2>
                                 <h3 class="promo_number_desc">professors</h3>
