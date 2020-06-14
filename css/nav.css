@@ -1,0 +1,40 @@
+nav {
+    width: 100%;
+    height: 72px;
+    position: fixed;
+    z-index: 100;
+}
+
+nav > div {
+    position: relative;
+    width: 1408px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#nav_logo {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    height: 32px;
+}
+
+#nav_buttons {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+}
+
+#nav_buttons span{
+    padding-left: 36px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#nav_buttons .nav_active {   
+    color: #005298;
+    font-weight: bolder;
+}
