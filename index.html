@@ -4,6 +4,7 @@
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/reset_retouched.css">
 
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -12,181 +13,181 @@
     <link rel="stylesheet" href="./css/campus.css">
     <link rel="stylesheet" href="./css/footer.css">
 
-    <script src="./js/nav.js"></script>
-
 </head>
 <body>
-<div id="font_loader">
-    <nav>
-        <div>
-            <a href="#main"><img id="nav_logo" src="./img/logo.png"></a>
-            <div id="nav_buttons">
-                <a href="#main"><button class="nav_active">메인</button></a>
-                <a href="#intro"><button>소개</button></a>
-                <a href="#major"><button>학부</button></a>
-                <a href="#campus"><button>캠퍼스</button></a>
-            </div>
-        </div>
-    </nav>
-
-    <div id="main"> 
-        <img id="bg" src="./img/main_bg.jpg"/>
-        <div id="bg_cover"></div>
-
-        <section id="main_section">
-            <img id="main_logo" width="512" src="./img/logo.png"/>
-
-            <a href="https://www.dongyang.ac.kr/web/www" target="blank">
-                <div id="button_homepage" class="button">
-                    <div>
-                        <img src="./img/icon_homepage.png"> 
-                        <h3>홈페이지 바로가기</h3>
-                    </div>
-                </div>
-            </a>
- 
-            <a href="https://cyber.dongyang.ac.kr/index.jsp" target="blank">
-                <div id="button_onlineclass" class ="button">
-                    <div>
-                        <img src="./img/icon_onlineclass.png"> 
-                        <h3>온라인수업 바로가기</h3>
-                    </div>
-                </div>
-            </a>
-        </section>
-    </div>
-
-    <div id="intro">
-        <h2 class="title">소개</h2>
-
-        <section id="intro_section">
+    <div id="font_loader">
+        <nav>
             <div>
-                <h2 id="name_en">DONGYANG MIRAE UNIVERSITY</h2>
-                <h1 id="name">동양미래대학교</h1>
+                <a href="#main"><img id="nav_logo" src="./img/logo.png"></a>
+                <ul id="nav_links">
+                    <li class="nav_active"><a href="#main">메인</a></li>
+                    <li><a href="#intro">소개</a></li>
+                    <li><a href="#major">학부</a></li>
+                    <li><a href="#campus">캠퍼스</a></li>
+                </ul>
             </div>
-            
-            <div>
-                <h2 id="desc_main">전문성과 인성의 산실 최고의 직업교육 선도대학</h2>
-                <h3 id="desc_detail">
-                    본 대학은 일찍이 기술만이 국가 경제 발전에 기여할 수 있다는 신념아래 1965년
-                    동양공업고등전문학교를 개교, 반세기가 흘렀습니다. 실험, 실습 교육에 많은 노력을
-                    경주하고 있으며, 계열기업 뿐만 아니라 많은 유관 기업과 활발한 산학 협동 및 현장 연
-                    수 교육을 통해 산업 사회에 적응할 수 있는 유능한 전문 직업인을 배출 하고자 합니다.
-                </h3>
-            </div>
+        </nav>
+
+        <section id="main"> 
+            <img id="bg" src="./img/main_bg.jpg"/>
+            <div id="bg_cover"></div>
+
+            <section id="main_section">
+                <img id="main_logo" width="512" src="./img/logo.png"/>
+
+                <a href="https://www.dongyang.ac.kr/web/www" target="blank">
+                    <div id="button_homepage" class="button">
+                        <div>
+                            <img src="./img/icon_homepage.png"> 
+                            <h3>홈페이지 바로가기</h3>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="https://cyber.dongyang.ac.kr/index.jsp" target="blank">
+                    <div id="button_onlineclass" class ="button">
+                        <div>
+                            <img src="./img/icon_onlineclass.png"> 
+                            <h3>온라인수업 바로가기</h3>
+                        </div>
+                    </div>
+                </a>
+            </section>
         </section>
 
-        <div id="promo">
-            <img id="promo_bg" src="./img/promo_bg.jpg">
-            <div id="promo_bg_cover"></div>
-            
-            <div id="promo_contents">
-                <video id="promo_video" width="800" autoplay controls>
-                    <source src="./video/promo_video.mp4" type="video/mp4">
-                </video>
+        <section id="intro">
+            <h2 class="title">소개</h2>
 
-                <div id="promo_desc">
-                    <div>
+            <section id="intro_section">
+                <div>
+                    <h2 id="name_en">DONGYANG MIRAE UNIVERSITY</h2>
+                    <h1 id="name">동양미래대학교</h1>
+                </div>
+                
+                <div>
+                    <h2 id="desc_main">전문성과 인성의 산실 최고의 직업교육 선도대학</h2>
+                    <h3 id="desc_detail">
+                        본 대학은 일찍이 기술만이 국가 경제 발전에 기여할 수 있다는 신념아래 1965년
+                        동양공업고등전문학교를 개교, 반세기가 흘렀습니다. 실험, 실습 교육에 많은 노력을
+                        경주하고 있으며, 계열기업 뿐만 아니라 많은 유관 기업과 활발한 산학 협동 및 현장 연
+                        수 교육을 통해 산업 사회에 적응할 수 있는 유능한 전문 직업인을 배출 하고자 합니다.
+                    </h3>
+                </div>
+            </section>
+
+            <div id="promo">
+                <img id="promo_bg" src="./img/promo_bg.jpg">
+                <div id="promo_bg_cover"></div>
+                
+                <div id="promo_contents">
+                    <video id="promo_video" width="800" autoplay controls>
+                        <source src="./video/promo_video.mp4" type="video/mp4">
+                    </video>
+
+                    <div id="promo_desc">
                         <div>
                             <div>
-                                <h2 class="promo_number">6018</h2>
-                                <h3 class="promo_number_desc">students</h3>
+                                <div>
+                                    <h2 class="promo_number">6018</h2>
+                                    <h3 class="promo_number_desc">students</h3>
+                                </div>
+    
+                                <div>
+                                    <h2 class="promo_number">164</h2>
+                                    <h3 class="promo_number_desc">professors</h3>
+                                </div>
                             </div>
- 
-                            <div>
-                                <h2 class="promo_number">164</h2>
-                                <h3 class="promo_number_desc">professors</h3>
-                            </div>
-                        </div>
 
-                        <h3>
+                            <h3>
+                                Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been the
+                                industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="major">
+            <h2 class="title">학부</h2>
+            
+            <table id="major_table">
+                <tr>
+                    <td class="active">기계공학부</td>
+                    <td>로봇자동화공학부</td>
+                    <td>전기전자통신공학부</td>
+                    <td>컴퓨터공학부</td>
+                    <td>생활환경공학부</td>
+                    <td>경영학부</td>
+                </tr>
+            </table>
+
+            <div id="major_detail">
+                <img id="major_detail_bg" src="./img/major_machine.jpg">
+                <div id="major_detail_bg_cover"></div>
+                <section>
+                    <div>
+                        <h2 id="major_name">기계공학부</h2>
+                        <h3 id="major_below">기계공학과 기계설계공학과</h3>
+                        <h4 id="major_desc">
                             Lorem Ipsum is simply dummy text of the printing
                             and typesetting industry. Lorem Ipsum has been the
                             industry's standard dummy text ever since the 1500s,
                             when an unknown printer took a galley of type and
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="major">
-        <h2 class="title">학부</h2>
-        
-        <table id="major_table">
-            <tr>
-                <td class="active">기계공학부</td>
-                <td>로봇자동화공학부</td>
-                <td>전기전자통신공학부</td>
-                <td>컴퓨터공학부</td>
-                <td>생활환경공학부</td>
-                <td>경영학부</td>
-            </tr>
-        </table>
-
-        <div id="major_detail">
-            <img id="major_detail_bg" src="./img/major_machine.jpg">
-            <div id="major_detail_bg_cover"></div>
-            <section>
-                <div>
-                    <h2 id="major_name">기계공학부</h2>
-                    <h3 id="major_below">기계공학과 기계설계공학과</h3>
-                    <h4 id="major_desc">
-                        Lorem Ipsum is simply dummy text of the printing
-                        and typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                    </h4>
-                    <div id="major_button_to_homepage">
-                        <div>
-                            <img src="./img/icon_homepage.png" width="28px" height="28px">
-                            <h3>학부 홈페이지 바로가기</h3>
+                        </h4>
+                        <div id="major_button_to_homepage">
+                            <div>
+                                <img src="./img/icon_homepage.png" width="28px" height="28px">
+                                <h3>학부 홈페이지 바로가기</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <div id="campus">
-        <h2 class="title">캠퍼스</h2>
-
-        <div>
-            <div id="campus_map_wrapper">
-                <img id="campus_map" src="./img/campus_map.png"/>
+                </section>
             </div>
-            
+        </div>
+
+        <div id="campus">
+            <h2 class="title">캠퍼스</h2>
+
             <div>
-                <h2 id="building_name">대학본부</h2>
-                <h3 id="building_desc">
-                    Lorem Ipsum is simply dummy text of the printing
-                    and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s
-                </h3>
-                <table id="building_table">
-                    <tr><td class="floor">1F</td><td>강의실</td></tr>
-                    <tr><td class="floor">1F</td><td>강의실</td></tr>
-                    <tr><td class="floor">1F</td><td>강의실</td></tr>
-                    <tr><td class="floor">1F</td><td>강의실</td></tr>
-                    <tr><td class="floor">1F</td><td>강의실</td></tr>
-                    <tr><td class="floor">1F</td><td>강의실</td></tr>
-                    <tr><td class="floor">1F</td><td>강의실</td></tr>
-                    <tr><td class="floor">1F</td><td>강의실</td></tr>
-                    <tr><td class="floor">1F</td><td>강의실</td></tr>
-                    <tr><td class="floor">1F</td><td>강의실</td></tr>
-                </table>
+                <div id="campus_map_wrapper">
+                    <img id="campus_map" src="./img/campus_map.png"/>
+                </div>
+                
+                <div>
+                    <h2 id="building_name">대학본부</h2>
+                    <h3 id="building_desc">
+                        Lorem Ipsum is simply dummy text of the printing
+                        and typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s
+                    </h3>
+                    <table id="building_table">
+                        <tr><td class="floor">1F</td><td>강의실</td></tr>
+                        <tr><td class="floor">1F</td><td>강의실</td></tr>
+                        <tr><td class="floor">1F</td><td>강의실</td></tr>
+                        <tr><td class="floor">1F</td><td>강의실</td></tr>
+                        <tr><td class="floor">1F</td><td>강의실</td></tr>
+                        <tr><td class="floor">1F</td><td>강의실</td></tr>
+                        <tr><td class="floor">1F</td><td>강의실</td></tr>
+                        <tr><td class="floor">1F</td><td>강의실</td></tr>
+                        <tr><td class="floor">1F</td><td>강의실</td></tr>
+                        <tr><td class="floor">1F</td><td>강의실</td></tr>
+                    </table>
+                </div>
             </div>
         </div>
+
+        <footer>
+            <h3>
+                08221 서울시 구로구 경인로 445 ([구]고척동 62-160) 동양미래대학교<br>
+                TEL. 02-2610-1700 FAX. 02-2688-5494<br>
+                COPYRIGHT 2015 Dongyang Mirae University. ALL RIGHTS RESERVED.    
+            </h3>
+        </footer>
     </div>
 
-    <footer>
-        <h3>
-            08221 서울시 구로구 경인로 445 ([구]고척동 62-160) 동양미래대학교<br>
-            TEL. 02-2610-1700 FAX. 02-2688-5494<br>
-            COPYRIGHT 2015 Dongyang Mirae University. ALL RIGHTS RESERVED.    
-        </h3>
-    </footer>
-</div>
+    <script src="./js/nav.js"></script>
 </body>
 

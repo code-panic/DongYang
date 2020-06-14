@@ -32,31 +32,33 @@ nav > div {
     height: 32px;
 }
 
-#nav_buttons {
+#nav_links {
+    display: inline;
     position: absolute;
     top: 50%;
     right: 0px;
     transform: translateY(-50%);
 }
 
-#nav_buttons button{
-    padding-left: 36px;
+#nav_links li {
+    display: inline-block;
+    margin-left: 24px;
     cursor: pointer;
     font-size: 16px;
     font-weight: normal;
-    background: none;
-    outline: none;
-    border: none;
-    color: #eeeeee;
     opacity: 100%;
     transition: opacity 0.5s;
 }
 
-#nav_buttons .nav_active {   
-    color: #005298;
-    font-weight: bolder;
+#nav_links li:hover:not(.nav_active) {
+    opacity: 60%;
 }
 
-#nav_buttons button:hover {
-    opacity: 70%;
+#nav_links a  {
+    color: #eeeeee;
+}
+
+.nav_active a {   
+    color: #ffffff;
+    font-weight: bold;
 }
