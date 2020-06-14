@@ -3,6 +3,18 @@ nav {
     height: 72px;
     position: fixed;
     z-index: 100;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,eeeeee+100&1+0,0+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(238,238,238,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(238,238,238,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(238,238,238,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00eeeeee',GradientType=0 ); /* IE6-9 */
+
+    transition: background 0.5s;
+}
+
+.nav_scrolled {
+    background-color: #141414;
 }
 
 nav > div {
@@ -27,14 +39,24 @@ nav > div {
     transform: translateY(-50%);
 }
 
-#nav_buttons span{
+#nav_buttons button{
     padding-left: 36px;
     cursor: pointer;
     font-size: 16px;
     font-weight: normal;
+    background: none;
+    outline: none;
+    border: none;
+    color: #eeeeee;
+    opacity: 100%;
+    transition: opacity 0.5s;
 }
 
 #nav_buttons .nav_active {   
     color: #005298;
     font-weight: bolder;
+}
+
+#nav_buttons button:hover {
+    opacity: 70%;
 }
