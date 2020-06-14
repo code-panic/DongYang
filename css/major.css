@@ -1,5 +1,104 @@
 #major {
-
-    height: 100%;
     background-color: #141414;
+    overflow: auto;
+}
+
+#major_table {
+    width: 1408px;
+    height: 64px;
+    margin: 0 auto;
+}
+
+#major_table td{
+    text-align: center;
+    color: #eeeeee;
+    opacity: 50%;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#major_detail {
+    position: relative;
+    width: 100%;
+    height: 600px;  
+    background: #000000;
+    margin-bottom: 120px;
+}
+
+#major_detail_bg {
+    position: absolute;
+    height: 600px;
+    right: 0px;
+}
+
+#major_detail_bg_cover {
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+40,eeeeee+60,eeeeee+100&1+0,1+40,0+60,0+100 */
+background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(238,238,238,0) 60%, rgba(238,238,238,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(238,238,238,0) 60%,rgba(238,238,238,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(238,238,238,0) 60%,rgba(238,238,238,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00eeeeee',GradientType=1 ); /* IE6-9 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#major_detail > section {
+    position: relative;
+    width: 1408px;
+    height: 600px;
+    margin: auto;
+}
+
+#major_detail > section > div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#major_name {
+    font-size: 64px;
+    font-weight: bolder;
+    margin-bottom: 32px;
+}
+
+#major_below {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+#major_desc {
+    width: 640px;
+    line-height: 2em;
+    font-size: 24px;
+    font-weight: normal;
+    opacity: 50%;
+    margin-bottom: 32px;
+}
+
+#major_button_to_homepage {
+    position: relative;
+    width: 360px;
+    height: 72px;
+    background: #eeeeee;
+    border-radius: 8px;
+    outline: none;
+}
+
+#major_button_to_homepage > div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#major_button_to_homepage img {
+    display: inline-block;
+}
+
+#major_button_to_homepage h3 {
+    display: inline-block;
+    color: #141414;
+    line-height: 28px;
+    font-size: 24px;
 }

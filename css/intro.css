@@ -1,6 +1,6 @@
 #intro {
-    height: 100%;
     background-color: #141414;
+    overflow:auto; 
 }
 
 .title {
