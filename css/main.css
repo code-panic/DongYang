@@ -9,7 +9,6 @@ html, body {
     position: relative;
     color: #eeeeee;
     font-family: "Nanum Gothic", sans-serif;
-    overflow: auto;
 }
 
 #main {
