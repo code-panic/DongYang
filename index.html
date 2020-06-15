@@ -29,42 +29,41 @@
         </nav>
 
         <section id="main"> 
+            <video id="main_video" width="800" muted="muted">
+                <source src="./video/main_video.mp4" type="video/mp4">
+            </video>
             <img id="main_bg" src="./img/main_bg.png"/>
             <div id="main_bg_cover"></div>
-
             <div id="main_detail_wrapper">
                 <div id="main_detail">
                     <img id="main_logo" src="./img/main_logo.png"/>
-                    
-                    <div id="main_top">
-                        <img src="./img/top3.png"/>
-                        <h2>한국 전문대 순위 3위</h2>
+                    <div id="main_desc_wrapper">
+                        <div id="main_top">
+                            <img src="./img/top3.png"/>
+                            <h2>한국 전문대 순위 3위</h2>
+                        </div>
+                        <h3 id="main_desc">
+                            Lorem Ipsum is simply dummy text of the printing
+                            and typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since
+                        </h3>
                     </div>
-
-                    <h3 id="main_desc">
-                        Lorem Ipsum is simply dummy text of the printing
-                        and typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since
-                    </h3>
-
                     <div id="main_button_to_homepage">
                         <a href="https://www.dongyang.ac.kr/web/www" target="blank">
                             <div>
                                 <img src="img/icon_homepage.png">
-                                <h3> 홈페이지 바로가기</h3>
+                                <h3> 홈페이지 </h3>
                             </div>
                         </a>
                     </div>
-
                     <div id="main_button_to_onlineclass">
-                        <a href="https://cyber.dongyang.ac.kr/index.jsp">
+                        <a href="https://cyber.dongyang.ac.kr/index.jsp" target="blank">
                             <div>
                                 <img src="img/icon_onlineclass.png">
-                                <h3> 온라인 수업 바로가기</h3>
+                                <h3> 온라인 수업 </h3>
                             </div>
                         </a>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -203,5 +202,6 @@
     </div>
 
     <script src="./js/nav.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
