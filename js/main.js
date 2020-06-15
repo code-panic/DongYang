@@ -18,8 +18,13 @@ setInterval(function() {
     }
 }, 5000);
 
-// setInterval(function() {
-//     if (isPlaying) {
-//         main_logo.style.transform = "scale(0.6,0.6)";
-//     }
-// }, 10000);
+setInterval(function() {
+    console.log("check");
+
+    if (isPlaying) {
+        main_logo.style.height = "120px";
+        main_desc_wrapper.style.opacity = 0;
+        main_desc_wrapper.style.transform = "translateY(100%)";
+        main_desc_wrapper.style.display = "none";
+    }
+}, 10000);

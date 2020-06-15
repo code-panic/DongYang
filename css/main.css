@@ -64,8 +64,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66141414', e
     display: block;
     height: 144px;
     margin-bottom: 48px;
+    transition: height 2s;
 }
 
+
+#main_desc_wrapper {
+    transition: all 2s;
+}
 
 #main_top {
     margin-bottom: 48px;
