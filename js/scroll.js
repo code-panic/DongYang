@@ -1,6 +1,8 @@
 const intro_name_wrapper = document.getElementById("intro_name_wrapper");
 const intro_desc_wrapper = document.getElementById("intro_desc_wrapper");
 
+const promo = document.getElementById("promo");
+
 window.onscroll = function() {
     // nav 배경처리 
     if (window.scrollY > nav.offsetHeight) {
@@ -12,6 +14,8 @@ window.onscroll = function() {
     // intro 애니메이션 처리
     scrollElement(intro_name_wrapper);
     scrollElement(intro_desc_wrapper);
+
+    scrollElement(promo);
 }
 
 function scrollElement(element) {

@@ -1,6 +1,6 @@
 #intro {
     background-color: #141414;
-    overflow:auto; 
+    overflow:hidden; 
 }
 
 .title {
@@ -25,7 +25,7 @@
     min-width: 584px;
     transition: all 0.5s;
     opacity: 0;
-    transform: translateX(-20%);
+    transform: translateX(-10%);
 }
 
 #intro_name_wrapper.showed {
@@ -53,7 +53,7 @@
 #intro_desc_wrapper {
     transition: all 0.5s;
     opacity: 0;
-    transform: translateX(20%);
+    transform: translateX(10%);
 }
 
 #intro_desc_wrapper.showed {
@@ -76,12 +76,18 @@
     font-size: 24px;
 }
 
-
-
 #promo {
     width: 100%;
     height: 800px;
     position: relative;
+    opacity: 0;
+    transform: translateY(10%);
+    transition: all 0.5s;
+}
+
+#promo.showed {
+    opacity: 1;
+    transform: translateY(0%);
 }
 
 
@@ -105,6 +111,7 @@
 }
 
 #promo_contents {
+    display: flex;
     position: absolute;
     width: 1408px;
     top: 50%;
@@ -112,31 +119,37 @@
     transform: translate(-50%, -50%);
 }
 
+#promo_video_wrapper {
+    flex: 1;
+}
+
 #promo_video {
-    margin-right: 120px;
+    width: 800px;
 }
 
-#promo_desc {
+#promo_desc_cont {
     display: inline-block;
-    width: 448px;
+    width: 480px;
     position: relative;
-    height: 405.63px;
 }
 
-#promo_desc > div {
+#promo_desc_cont > div {
     position: absolute;
     bottom: 0px;
 }
 
-#promo_desc > div > div > div {
-    display: inline-block;
-    width: 49%;
+#promo_number_wrapper {
+    display: flex;
+}
+
+#promo_number_wrapper > div {
+    flex: 1;
 }
 
 .promo_number {
     color: #005298;
     font-size: 64px;
-    font-weight: 600;
+    font-weight: bold;
     text-align: center;
     margin-bottom: 8px;
 }
@@ -144,10 +157,11 @@
 .promo_number_desc {
     color: #eeeeee;
     text-align: center;
+    font-weight: bold;
     font-size: 24px;
 }
 
-#promo_desc > div > h3 {
+#promo_desc {
     margin-top: 64px;
     font-size: 24px;
     color: #eeeeee;
