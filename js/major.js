@@ -36,7 +36,8 @@ function clickMajorKind(major_kind) {
 
     // console.log(major_kind.textContent);
 
-    console.log(majorObj['majors']);
+    console.log(majorObj);
+    console.log(majorObj['majors'][0]);
 
     //major_detail의 값 변경
     majorObj['majors'].forEach(major => {
