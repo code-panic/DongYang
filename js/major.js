@@ -41,8 +41,8 @@ function clickMajorKind(major_kind) {
     console.log(majorObj);
     console.log(majorObj['majors'][0]);
 
-    major_desc_wrapper.style.animation = '';
-    major_detail_bg.style.animation = '';
+    major_desc_wrapper.style.animation = 'none';
+    major_detail_bg.style.animation = 'none';
 
     //major_detail 값 변경
     majorObj['majors'].forEach(major => {
