@@ -83,6 +83,20 @@
     transform: translateY(-50%);
 }
 
+@keyframes major_desc_wrapper_change {
+    from {
+        display: none;
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
 #major_name {
     font-size: 64px;
     font-weight: bolder;
