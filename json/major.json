@@ -1,6 +1,7 @@
 {
     "majors" : [
         {
+            "id": "machine",
             "name": "기계공학부",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "homepage_address": "https://www.dongyang.ac.kr/web/mechan",
@@ -9,6 +10,7 @@
                 "기계설계공학과"
             ]
         },  {
+            "id": "robot",
             "name": "로봇자동화공학부",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "homepage_address": "https://www.dongyang.ac.kr/web/fa",
@@ -17,6 +19,7 @@
                 "로봇공학과"
             ]
         },  {
+            "id": "electric",
             "name": "전기전자통신공학부",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "homepage_address": "https://www.dongyang.ac.kr/web/epower",
@@ -27,6 +30,7 @@
                 "정보통신공학과"
             ]
         },  {
+            "id": "computer",
             "name": "컴퓨터공학부",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "homepage_address": "https://www.dongyang.ac.kr/web/computer",
@@ -35,6 +39,7 @@
                 "컴퓨터소프트웨어공학과"
             ]
         },  {
+            "id": "enviroment",
             "name": "생활환경공학부",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "homepage_address": "https://www.dongyang.ac.kr/web/chemical",
@@ -46,6 +51,7 @@
                 "시각정보디자인과"
             ]
         },  {
+            "id": "manage",
             "name": "경영학부",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "homepage_address": "https://www.dongyang.ac.kr/web/mgt",

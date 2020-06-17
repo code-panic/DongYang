@@ -4,12 +4,12 @@ const request = new XMLHttpRequest();
 const major_kind_list = document.getElementById("major_kind_wrapper").children;
 
 const major_desc_wrapper = document.getElementById("major_desc_wrapper");
+const major_detail_bg = document.getElementById("major_detail_bg");
 
 const major_name = document.getElementById("major_name");
 const major_departments = document.getElementById("major_departments");
 const major_desc = document.getElementById("major_desc");
 const major_homepage_address = document.getElementById("major_homepage_address");
-const major_detail_bg = document.getElementById("major_detail_bg");
 
 let majorObj;
 
@@ -38,12 +38,12 @@ function clickMajorKind(major_kind) {
 
     // console.log(major_kind.textContent);
 
-    console.log(majorObj);
-    console.log(majorObj['majors'][0]);
+    // console.log(majorObj);
+    // console.log(majorObj['majors'][0]);
 
-    //major_detail의 값 변경
+    //major_detail 값 변경
     majorObj['majors'].forEach(major => {
-        if(major['name'] == major_kind.textContent) {
+        if(major_kind.dataset.id = major['id']) {
             major_name.textContent = major['name'];
             
             major_departments.textContent = "";
@@ -54,6 +54,10 @@ function clickMajorKind(major_kind) {
             
             major_desc.textContent = major['desc'];
             major_homepage_address.href = major['homepage_address'];
+
+            major_detail_bg.src = "major_"+ major['id'] + ".png";
+
+            console.log(major_detail_bg.src);
 
             major_desc_wrapper.style.animation = 'major_desc_wrapper_change 1s';
             return;
