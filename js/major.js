@@ -17,7 +17,7 @@ request.send();
 
 request.onload = function() {
     majorObj = request.response;
-    // console.log(majorObj);
+    console.log(majorObj);
 }
 
 //클릭 이벤트 구현
