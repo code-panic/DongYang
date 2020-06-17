@@ -57,6 +57,12 @@
     position: absolute;
     height: 600px;
     right: 0px;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+#major_detail_bg.showed {
+    opacity: 1;
 }
 
 #major_detail_bg_cover {
@@ -81,21 +87,13 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    opacity: 0;
+    transform: translate(20%, -50%);
 }
 
-@keyframes major_desc_wrapper_change {
-    from {
-        display: none;
-    }
-    50% {
-        display: block;
-        opacity: 0;
-        transform: translateX(20%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0%);
-    }
+#major_desc_wrapper.showed {
+    opacity: 1;
+    transform: translate(0%, -50%);
 }
 
 #major_name {
@@ -121,7 +119,7 @@
 
 #major_button_to_homepage {
     position: relative;
-    width: 240px;
+    width: 280px;
     height: 64px;
     border-radius: 8px;
     background-color: #ffffff;

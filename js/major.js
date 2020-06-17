@@ -22,6 +22,9 @@ request.onload = function() {
     majorObj = request.response;
 }
 
+major_desc_wrapper.style.animation = 'major_desc_wrapper_change 1s';
+major_detail_bg.style.animation = 'major_detail_bg_change 1s';
+
 //클릭 이벤트 구현
 Array.from(major_kind_list).forEach(major_kind => {
     major_kind.addEventListener("click", function() {
@@ -44,21 +47,26 @@ function clickMajorKind(major_kind) {
     //major_detail 값 변경
     majorObj['majors'].forEach(major => {
         if(major_kind.dataset.id == major['id']) {
- 
-            major_name.textContent = major['name'];
-            
-            major_departments.textContent = "";
 
-            major['departments'].forEach(major_department => {
-                major_departments.textContent += major_department + " ";
-            });
-            
-            major_desc.textContent = major['desc'];
-            major_homepage_address.href = major['homepage_address'];
+            major_detail_bg.classList.remove("showed");
+            major_desc_wrapper.classList.remove("showed");
 
-            major_detail_bg.src = "./img/major_"+ major['id'] + ".png";
+            setTimeout(function() {
+                major_detail_bg.src = "./img/major_"+ major['id'] + ".png";
+    
+                console.log(major_detail_bg.src);
 
-            console.log(major_detail_bg.src);
+                major_name.textContent = major['name'];
+                major_departments.textContent = "";
+                major['departments'].forEach(major_department => {
+                    major_departments.textContent += major_department + " ";
+                });
+                major_desc.textContent = major['desc'];
+                major_homepage_address.href = major['homepage_address'];
+
+                major_detail_bg.classList.add("showed");
+                major_desc_wrapper.classList.add("showed");
+            }, 500);
 
             // major_desc_wrapper.style.animation = 'major_desc_wrapper_change 1s';
 
