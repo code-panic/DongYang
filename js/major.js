@@ -43,7 +43,8 @@ function clickMajorKind(major_kind) {
 
     //major_detail 값 변경
     majorObj['majors'].forEach(major => {
-        if(major_kind.dataset.id = major['id']) {
+        if(major_kind.dataset.id == major['id']) {
+ 
             major_name.textContent = major['name'];
             
             major_departments.textContent = "";
@@ -59,7 +60,8 @@ function clickMajorKind(major_kind) {
 
             console.log(major_detail_bg.src);
 
-            major_desc_wrapper.style.animation = 'major_desc_wrapper_change 1s';
+            // major_desc_wrapper.style.animation = 'major_desc_wrapper_change 1s';
+
             return;
         }
     });
