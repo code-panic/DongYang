@@ -43,6 +43,8 @@ function clickMajorKind(major_kind) {
         if(major['name'] == major_kind.textContent) {
             major_name.textContent = major['name'];
             
+            major_departments.textContent = "";
+            
             major['departments'].forEach(major_department => {
                 major_departments.textContent += major_department + " ";
             });
