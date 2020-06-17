@@ -17,7 +17,6 @@ request.send();
 
 request.onload = function() {
     majorObj = request.response;
-    console.log(majorObj);
 }
 
 //클릭 이벤트 구현
@@ -42,9 +41,10 @@ function clickMajorKind(major_kind) {
     //major_detail의 값 변경
     majorObj['majors'].forEach(major => {
         if(major['name'] == major_kind.textContent) {
-            major_name = major['name'];
+
+            major_name.textContent = major['name'];
             
-            major_desc = major['desc'];
+            major_desc.textContent = major['desc'];
             major_homepage_adress.href = major['homepage_adress'];
 
 
