@@ -44,6 +44,8 @@ function clickMajorKind(major_kind) {
     major_desc_wrapper.style.animation = 'none';
     major_detail_bg.style.animation = 'none';
 
+    major_desc_wrapper.offsetHeight;    // reflow trigger
+
     //major_detail 값 변경
     majorObj['majors'].forEach(major => {
         if(major_kind.dataset.id == major['id']) {

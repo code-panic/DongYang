@@ -101,7 +101,7 @@
     }
     50% {
         opacity: 0;
-        transform: translate(20%, -50%);
+        transform: translate(10%, -50%);
     }
     to {
         opacity: 1;
