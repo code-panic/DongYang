@@ -55,7 +55,7 @@ function clickMajorKind(major_kind) {
             major_desc.textContent = major['desc'];
             major_homepage_address.href = major['homepage_address'];
 
-            major_detail_bg.src = "major_"+ major['id'] + ".png";
+            major_detail_bg.src = "./img/major_"+ major['id'] + ".png";
 
             console.log(major_detail_bg.src);
 
