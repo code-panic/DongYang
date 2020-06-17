@@ -34,6 +34,8 @@ function clickMajorKind(major_kind) {
 
     // console.log(major_kind.textContent);
 
+    console.log(majorObj['majors']);
+
     //major_detail의 값 변경
     majorObj['majors'].forEach(major => {
         if(major['name'] == major_kind.textContent) {
@@ -41,7 +43,7 @@ function clickMajorKind(major_kind) {
             
             major_desc = major['desc'];
             major_homepage_adress.href = major['homepage_adress'];
-            
+
 
             return;
         }
