@@ -6,7 +6,7 @@ const major_kind_list = document.getElementById("major_kind_wrapper").children;
 const major_name = document.getElementById("major_name");
 const major_departments = document.getElementById("major_departments");
 const major_desc = document.getElementById("major_desc");
-const major_homepage_adress = document.getElementById("major_hompage_adress");
+let major_homepage_address = document.getElementById("major_homepage_address");
 
 let majorObj;
 
@@ -44,14 +44,13 @@ function clickMajorKind(major_kind) {
             major_name.textContent = major['name'];
             
             major_departments.textContent = "";
-            
+
             major['departments'].forEach(major_department => {
                 major_departments.textContent += major_department + " ";
             });
-
+            
             major_desc.textContent = major['desc'];
-            major_homepage_adress.href = major['homepage_address'];
-
+            major_homepage_address.href = major['homepage_address'];
 
             return;
         }

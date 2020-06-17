@@ -30,7 +30,7 @@
             "name": "컴퓨터공학부",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "homepage_address": "https://www.dongyang.ac.kr/web/computer",
-            "department": [
+            "departments": [
                 "컴퓨터정보공학과",
                 "컴퓨터소프트웨어공학과"
             ]
