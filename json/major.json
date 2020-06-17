@@ -1,0 +1,14 @@
+{
+    "majors" : [
+        {
+            "id": "mechanic",
+            "name": "기계공학부",
+            "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
+            "homepage_address": "https://www.dongyang.ac.kr/web/mechan",
+            "department": [
+                "기계공학과",
+                "기계설계공학과"
+            ]
+        }
+    ]
+}

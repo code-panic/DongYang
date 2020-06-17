@@ -119,11 +119,10 @@
             </div>
         </section>
 
-        <div id="major">
+        <section id="major">
             <h2 class="title">학부</h2>
-            
-            <table id="major_table">
-                <tr>
+            <table id="major_kind_table">
+                <tr id="major_kind_wrapper">
                     <td class="active">기계공학부</td>
                     <td>로봇자동화공학부</td>
                     <td>전기전자통신공학부</td>
@@ -132,12 +131,11 @@
                     <td>경영학부</td>
                 </tr>
             </table>
-
             <div id="major_detail">
                 <img id="major_detail_bg" src="./img/major_machine.png">
                 <div id="major_detail_bg_cover"></div>
-                <section>
-                    <div>
+                <div id="major_desc_cont">
+                    <div id="major_desc_wrapper">
                         <h2 id="major_name">기계공학부</h2>
                         <h3 id="major_below">기계공학과 기계설계공학과</h3>
                         <h4 id="major_desc">
@@ -146,16 +144,19 @@
                             industry's standard dummy text ever since the 1500s,
                             when an unknown printer took a galley of type and
                         </h4>
+
                         <div id="major_button_to_homepage">
-                            <div>
-                                <img src="./img/icon_homepage.png" width="28px" height="28px">
-                                <h3>학부 홈페이지 바로가기</h3>
-                            </div>
+                            <a href="https://www.dongyang.ac.kr/web/www" target="blank">
+                                <div>
+                                    <img src="img/icon_homepage.png">
+                                    <h3> 학부 홈페이지 </h3>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
-        </div>
+        </section>
 
         <div id="campus">
             <h2 class="title">캠퍼스</h2>
@@ -200,6 +201,7 @@
     <script src="./js/nav.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/intro.js"></script>
+    <script src="./js/major.js"></script>
 
     <script src="./js/scroll.js"></script>
 </body>

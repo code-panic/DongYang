@@ -3,18 +3,47 @@
     overflow: auto;
 }
 
-#major_table {
+#major_kind_table {
     width: 1408px;
     height: 64px;
     margin: 0 auto;
 }
 
-#major_table td{
+#major_kind_table td{
+    position: relative;
     text-align: center;
     color: #eeeeee;
-    opacity: 50%;
     font-size: 24px;
     cursor: pointer;
+    transition: all 0.5s;
+}
+
+#major_kind_table td:hover:not(.active) {
+    opacity: 0.6;
+}
+
+#major_kind_table td.active {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#major_kind_table td::before {
+    display: none;
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    width: 0px;
+    height: 0px;
+    border: #ffffff solid 4px;
+    border-radius: 4px;
+    transition: width 0.5s;
+}
+
+#major_kind_table td.active::before {
+    display: block;
+    width: 48px;
 }
 
 #major_detail {
@@ -22,7 +51,7 @@
     width: 100%;
     height: 600px;  
     background: #000000;
-    margin-bottom: 120px;
+    margin-bottom: 96px;
 }
 
 #major_detail_bg {
@@ -32,24 +61,24 @@
 }
 
 #major_detail_bg_cover {
-/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+40,eeeeee+60,eeeeee+100&1+0,1+40,0+60,0+100 */
-background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(238,238,238,0) 60%, rgba(238,238,238,0) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(238,238,238,0) 60%,rgba(238,238,238,0) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(238,238,238,0) 60%,rgba(238,238,238,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00eeeeee',GradientType=1 ); /* IE6-9 */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+40,eeeeee+60,eeeeee+100&1+0,1+40,0+60,0+100 */
+    background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(238,238,238,0) 60%, rgba(238,238,238,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(238,238,238,0) 60%,rgba(238,238,238,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(238,238,238,0) 60%,rgba(238,238,238,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00eeeeee',GradientType=1 ); /* IE6-9 */
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
-#major_detail > section {
+#major_desc_cont {
     position: relative;
     width: 1408px;
     height: 600px;
     margin: auto;
 }
 
-#major_detail > section > div {
+#major_desc_wrapper {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -78,14 +107,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 
 #major_button_to_homepage {
     position: relative;
-    width: 360px;
-    height: 72px;
-    background: #eeeeee;
+    width: 240px;
+    height: 64px;
     border-radius: 8px;
-    outline: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-right: 16px;
+    transition: background-color 0.5s;
 }
 
-#major_button_to_homepage > div{
+#major_button_to_homepage:hover {
+    background-color: #cccccc;
+}
+
+#major_button_to_homepage a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#major_button_to_homepage div {
+    display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -93,12 +135,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 
 #major_button_to_homepage img {
-    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
 }
 
 #major_button_to_homepage h3 {
-    display: inline-block;
-    color: #141414;
-    line-height: 28px;
+    width: auto;
+    color: #000000;
+    font-weight: bold;
     font-size: 24px;
+    line-height: 32px;
+    white-space: nowrap;
 }
