@@ -13,6 +13,7 @@
     position: relative;
     text-align: center;
     color: #eeeeee;
+    font-weight: normal;
     font-size: 24px;
     cursor: pointer;
     transition: all 0.5s;
@@ -88,7 +89,7 @@
     margin-bottom: 32px;
 }
 
-#major_department {
+#major_departments {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 32px;
