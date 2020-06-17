@@ -57,12 +57,18 @@
     position: absolute;
     height: 600px;
     right: 0px;
-    transition: all 0.5s;
-    opacity: 0;
 }
 
-#major_detail_bg.showed {
-    opacity: 1;
+@keyframes major_detail_bg_change {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #major_detail_bg_cover {
@@ -87,13 +93,20 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    opacity: 0;
-    transform: translate(20%, -50%);
 }
 
-#major_desc_wrapper.showed {
-    opacity: 1;
-    transform: translate(0%, -50%);
+@keyframes major_desc_wrapper_change {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        transform: translate(20%, -50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0%, -50%);
+    }
 }
 
 #major_name {
