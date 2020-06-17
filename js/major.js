@@ -8,13 +8,15 @@ const major_department = document.getElementById("major_department");
 const major_desc = document.getElementById("major_desc");
 const major_homepage_adress = document.getElementById("major_hompage_adress");
 
+let majorObj;
+
 //Json 객체 받아오기
 request.open('GET', jsonURL);
 request.responseType = 'json';
 request.send();
 
 request.onload = function() {
-    const majorObj = request.response;
+    majorObj = request.response;
     // console.log(majorObj);
 }
 
