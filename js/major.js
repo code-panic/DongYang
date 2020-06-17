@@ -41,6 +41,9 @@ function clickMajorKind(major_kind) {
     console.log(majorObj);
     console.log(majorObj['majors'][0]);
 
+    major_desc_wrapper.style.animation = '';
+    major_detail_bg.style.animation = '';
+
     //major_detail 값 변경
     majorObj['majors'].forEach(major => {
         if(major_kind.dataset.id == major['id']) {
@@ -59,8 +62,8 @@ function clickMajorKind(major_kind) {
             major_desc.textContent = major['desc'];
             major_homepage_address.href = major['homepage_address'];
 
-            major_detail_bg.classList.add("showed");
-            major_desc_wrapper.classList.add("showed");
+            // major_detail_bg.classList.add("showed");
+            // major_desc_wrapper.classList.add("showed");
 
             // major_desc_wrapper.style.animation = 'major_desc_wrapper_change 1s';
 
