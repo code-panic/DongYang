@@ -9,21 +9,28 @@
 }
 
 #campus_map_wrapper {
+    position: relative;
     flex:1;
 }
 
-#campus_map {
+#campus_map_wrapper > canvas {
+    position: absolute;
     width: 800PX;
     margin-top: 96px;
+    filter: brightness(60%);
 }
 
-#building_name {
+#campus_map_wrapper > canvas.active {
+    filter: brightness(100%);
+}
+
+#campus_building_name {
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 48px;
 }
 
-#building_desc {
+#campus_building_desc {
     font-size: 24px;
     width: 480px;
     font-weight: normal;
@@ -31,7 +38,7 @@
     line-height: 2em;
 }
 
-#building_table {
+#campus_building_table {
     font-size: 24px;
     opacity: 50%;
 }
