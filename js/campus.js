@@ -102,6 +102,13 @@ function addCanvasImage(src) {
 }
 
 campus_map_wrapper.addEventListener('mousemove', function(event) {
-    var pixelData = canvas.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;
-    console.log(pixelData);
+
+    const elements = document.elementsFromPoint(event.clientX, event.clientY);
+
+    Array.from(elements).forEach(element => {
+        if(element.tagName == "CANVAS") {
+            const pixelData = element.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;
+            console.log(pixelData);
+        }
+    });
 });
