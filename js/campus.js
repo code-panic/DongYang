@@ -71,12 +71,13 @@ campus_map_wrapper.addEventListener('mousemove', function(event) {
 
             const pixel = element.getContext('2d')
                             .getImageData(event.clientX - campus_map_wrapper_rect.left, 
-                                            event.clientY - campus_map_wrapper_rect.top, 1, 1).data;
+                                            event.clientY - campus_map_wrapper_rect.top, 1, 1);
 
+            console.log(pixel);
         
-            if (pixel[3] != 0) {
-                console.log(element.src);
-            }
+            // if (pixel[3] != 0) {
+            //     console.log(element.src);
+            // }
         }
     });
 
