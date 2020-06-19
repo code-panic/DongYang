@@ -32,15 +32,15 @@
 const campus_map_wrapper = document.getElementById("campus_map_wrapper");
 
 addCanvas('./img/campus_building_9.png');
-addCanvas('./img/campus_floor.png');
-addCanvas('./img/campus_building_8.png');
-addCanvas('./img/campus_building_7.png');
-addCanvas('./img/campus_building_6.png');
-addCanvas('./img/campus_building_5.png');
-addCanvas('./img/campus_building_4.png');
-addCanvas('./img/campus_building_3.png');
-addCanvas('./img/campus_building_2.png');
-addCanvas('./img/campus_building_1.png');
+// addCanvas('./img/campus_floor.png');
+// addCanvas('./img/campus_building_8.png');
+// addCanvas('./img/campus_building_7.png');
+// addCanvas('./img/campus_building_6.png');
+// addCanvas('./img/campus_building_5.png');
+// addCanvas('./img/campus_building_4.png');
+// addCanvas('./img/campus_building_3.png');
+// addCanvas('./img/campus_building_2.png');
+// addCanvas('./img/campus_building_1.png');
 
 function addCanvas(src) {
     const canvas = document.createElement("canvas");
@@ -69,11 +69,14 @@ campus_map_wrapper.addEventListener('mousemove', function(event) {
         if(element.tagName == "CANVAS") {
             // console.log(element);
 
-            const pixel = element.getContext('2d')
-                            .getImageData(event.clientX - campus_map_wrapper_rect.left, 
-                                            event.clientY - campus_map_wrapper_rect.top, 1, 1);
+            // const pixel = element.getContext('2d')
+            //                 .getImageData(event.clientX - campus_map_wrapper_rect.left, 
+            //                                 event.clientY - campus_map_wrapper_rect.top, 1, 1);
 
-            console.log(pixel);
+            const pixel = element.getContext('2d').getImageData(event.clientX, event.clientY, 1, 1);
+
+            console.log(pixel.data);
+            // console.log(pixel.data[3]);
         
             // if (pixel[3] != 0) {
             //     console.log(element.src);
