@@ -55,7 +55,8 @@ function addCanvas(src) {
     canvas.setAttribute('data-id', src);
 
     tmp_image.onload = function() {
-        canvas.getContext('2d').drawImage(tmp_image, 0, 0, canvas.width, canvas.height);    
+        canvas.getContext('2d').drawImage(tmp_image, 0, 0, canvas.width, canvas.height);
+        console.log("tmp_imgae is loaded");    
         // tmp_image.setAttribute('crossOrigin', '');
     }
 }
