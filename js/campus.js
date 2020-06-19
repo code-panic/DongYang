@@ -61,7 +61,7 @@ function addCanvas(src) {
 }
 
 campus_map_wrapper.addEventListener('mousemove', function(event) {
-    const campus_map_wrapper_rect = campus_map_wrapper.getBoundingClientRect();
+    // const campus_map_wrapper_rect = campus_map_wrapper.getBoundingClientRect();
 
     const elements = document.elementsFromPoint(event.clientX, event.clientY);
 
@@ -74,9 +74,9 @@ campus_map_wrapper.addEventListener('mousemove', function(event) {
             //                                 event.clientY - campus_map_wrapper_rect.top, 1, 1);
 
             // const pixel = element.getContext('2d').getImageData(event.clientX, event.clientY, 1, 1);
-            const pixel = element.getContext('2d').getImageData(campus_map_wrapper_rect.left, campus_map_wrapper_rect.top, element.width, element.height);
+            const pixel = element.getContext('2d').getImageData(event.clientX, event.clientY, 1, 1);
 
-            console.log(pixel);
+            console.log(pixel.data);
 
             //console.log(element + "clientX : " + event.clientX + " clientY : " + event.clientY + " pixel data : " + pixel.data);
             // console.log(pixel.data[3]);
