@@ -60,25 +60,48 @@
 //     console.log(pixelData);
 // });
 
+// // 빈 코드에 캔버스를 추가하는 방식
+// const campus_map_wrapper = document.getElementById("campus_map_wrapper");
+
+// const canvas = document.createElement('canvas');
+// canvas.width = 800;
+// canvas.height = 448;
+
+// const tmp_image = new Image();
+// tmp_image.src = "./img/campus_building_8.png";
+
+// tmp_image.onload = function() {
+//     canvas.getContext('2d').drawImage(tmp_image, 0, 0, canvas.width, canvas.height);
+// }
+// campus_map_wrapper.appendChild(canvas);
+
+// campus_map_wrapper.addEventListener('mousemove', function(event) {
+//     var pixelData = canvas.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;
+//     console.log(pixelData);
+// });
+
+
 // 빈 코드에 캔버스를 추가하는 방식
 const campus_map_wrapper = document.getElementById("campus_map_wrapper");
 
-const canvas = document.createElement('canvas');
-canvas.width = 800;
-canvas.height = 448;
+addCanvasImage('./img/campus_building_8.png')
 
-const tmp_image = new Image();
-tmp_image.src = "./img/campus_building_8.png";
+function addCanvasImage(src) {
+    const canvas = document.createElement('canvas');
+    canvas.width = 800;
+    canvas.height = 448;
 
-tmp_image.onload = function() {
-    canvas.getContext('2d').drawImage(tmp_image, 0, 0, canvas.width, canvas.height);
+    campus_map_wrapper.appendChild(canvas);
+
+    const tmp_image = new Image();
+    tmp_image.src = src;
+
+    tmp_image.onload = function() {
+        canvas.getContext('2d').drawImage(tmp_image, 0, 0, canvas.width, canvas.height);
+    }
 }
-
-campus_map_wrapper.appendChild(canvas);
 
 campus_map_wrapper.addEventListener('mousemove', function(event) {
     var pixelData = canvas.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;
     console.log(pixelData);
 });
-
-
