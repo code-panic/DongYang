@@ -67,16 +67,16 @@ campus_map_wrapper.addEventListener('mousemove', function(event) {
 
     Array.from(elements).forEach(element => {
         if(element.tagName == "CANVAS") {
-            console.log(element);
+            // console.log(element);
 
             const pixel = element.getContext('2d')
                             .getImageData(event.clientX - campus_map_wrapper_rect.left, 
                                             event.clientY - campus_map_wrapper_rect.top, 1, 1).data;
 
         
-            // if (pixel[3] != 0) {
-            //     console.log(element.src);
-            // }
+            if (pixel[3] != 0) {
+                console.log(element.src);
+            }
         }
     });
 
