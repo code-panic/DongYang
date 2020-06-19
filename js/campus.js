@@ -42,6 +42,14 @@ addCanvas('./img/campus_building_9.png');
 // addCanvas('./img/campus_building_2.png');
 // addCanvas('./img/campus_building_1.png');
 
+var c = document.createElement("canvas");
+var ctx = c.getContext("2d");
+
+campus_map_wrapper.appendChild(c);
+
+ctx.fillStyle = "red";
+ctx.fillRect(10, 10, 50, 50);
+
 function addCanvas(src) {
     const canvas = document.createElement("canvas");
     canvas.width = 800;
