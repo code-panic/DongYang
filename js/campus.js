@@ -84,7 +84,16 @@
 // 빈 코드에 캔버스를 추가하는 방식
 const campus_map_wrapper = document.getElementById("campus_map_wrapper");
 
-addCanvasImage('./img/campus_building_8.png')
+addCanvasImage('./img/campus_building_9.png');
+addCanvasImage('./img/campus_floor.png');
+addCanvasImage('./img/campus_building_8.png');
+addCanvasImage('./img/campus_building_7.png');
+addCanvasImage('./img/campus_building_6.png');
+addCanvasImage('./img/campus_building_5.png');
+addCanvasImage('./img/campus_building_4.png');
+addCanvasImage('./img/campus_building_3.png');
+addCanvasImage('./img/campus_building_2.png');
+addCanvasImage('./img/campus_building_1.png');
 
 function addCanvasImage(src) {
     const canvas = document.createElement('canvas');
