@@ -42,13 +42,22 @@ addCanvas('./img/campus_building_9.png');
 // addCanvas('./img/campus_building_2.png');
 // addCanvas('./img/campus_building_1.png');
 
-var c = document.createElement("canvas");
+var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-
-campus_map_wrapper.appendChild(c);
-
 ctx.fillStyle = "red";
 ctx.fillRect(10, 10, 50, 50);
+
+c.addEventListener('mousemove', function(event) {
+    const elements = document.elementsFromPoint(event.clientX, event.clientY);
+
+    Array.from(elements).forEach(element => {
+        if(element.tagName == "CANVAS") {
+            const pixel = element.getContext('2d').getImageData(event.clientX, event.clientY, 1, 1);
+            console.log(pixel.data);
+        }
+    });
+});
+
 
 function addCanvas(src) {
     const canvas = document.createElement("canvas");
