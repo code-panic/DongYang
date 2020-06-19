@@ -24,7 +24,7 @@
     filter: brightness(50%);
 }
 
-#campus_map_wrapper > canvas.active {
+#campus_map_wrapper > canvas.clicked {
     filter: brightness(100%);
 }
 
