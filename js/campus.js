@@ -75,7 +75,7 @@ campus_map_wrapper.addEventListener('mousemove', function(event) {
 
             const pixel = element.getContext('2d').getImageData(event.clientX, event.clientY, 1, 1);
 
-            console.log(pixel.data);
+            console.log(element + "clientX : " + event.clientX + " clientY : " + event.clientY + "pixel data : " + pixel.data);
             // console.log(pixel.data[3]);
         
             // if (pixel[3] != 0) {
