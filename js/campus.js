@@ -117,7 +117,10 @@ campus_map_wrapper.addEventListener('mousemove', function(event) {
     Array.from(elements).forEach(element => {
         if(element.tagName == "CANVAS") {
             const pixelData = element.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;
-            console.log(pixelData);
+            
+            if (pixelData[3] != 0) {
+                element.classList.add('hover');
+            }
         }
     });
 });

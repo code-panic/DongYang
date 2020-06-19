@@ -17,6 +17,11 @@
     position: absolute;
     width: 800PX;
     margin-top: 96px;
+    filter: brightness(70%);
+}
+
+#campus_map_wrapper > canvas.hover {
+    filter: brightness(50%);
 }
 
 #campus_map_wrapper > canvas.active {
