@@ -1,5 +1,4 @@
-const jsonURL = "./json/major.json";
-const request = new XMLHttpRequest();
+const majorRequest = new XMLHttpRequest();
 
 const major_kind_list = document.getElementById("major_kind_wrapper").children;
 
@@ -14,12 +13,12 @@ const major_homepage_address = document.getElementById("major_homepage_address")
 let majorObj;
 
 //Json 객체 받아오기
-request.open('GET', jsonURL);
-request.responseType = 'json';
-request.send();
+majorRequest.open('GET', "./json/major.json");
+majorRequest.responseType = 'json';
+majorRequest.send();
 
-request.onload = function() {
-    majorObj = request.response;
+majorRequest.onload = function() {
+    majorObj = majorRequest.response;
 }
 
 //클릭 이벤트 구현

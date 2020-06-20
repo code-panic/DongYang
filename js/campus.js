@@ -1,4 +1,20 @@
+const campusRequest = new XMLHttpRequest();
+
 const campus_map_wrapper = document.getElementById("campus_map_wrapper");
+
+const campus_building_name = document.getElementById("campus_building_name");
+const campus_building_desc = document.getElementById("campus_building_desc");
+const campus_building_table = document.getElementById("campus_building_table");
+
+let campusObj;
+
+campusRequest.open('GET', "./json/campus.json");
+campusRequest.responseType = 'json';
+campusRequest.send();
+
+campusRequest.onload = function() {
+    campusObj = campusRequest.response;
+}
 
 addCanvasImage('./img/campus_building_9.png');
 addCanvasImage('./img/campus_floor.png');
@@ -75,7 +91,15 @@ campus_map_wrapper.onclick =  function(event) {
                 element.classList.remove('hover');
                 element.classList.add('clicked');
 
+                campusObj['bulidings'].forEach(building => {
+                    if(element.dataset.id == building['id']) {
+                        campus_building_name.textContent = building['name'];
+                        campus_building_desc.textContent = building['desc'];
+                        
 
+                        return;
+                    }
+                });
                 
             }
         }
