@@ -73,8 +73,6 @@ campus_map_wrapper.addEventListener('mousemove', function(event) {
 campus_map_wrapper.onclick =  function(event) {
     const elements = document.elementsFromPoint(event.clientX, event.clientY);
 
-    console.log("a");
-
     Array.from(elements).forEach(element => {
         if(element.tagName == "CANVAS") {
             const pixelData = element.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;
@@ -98,7 +96,13 @@ campus_map_wrapper.onclick =  function(event) {
                         
                         campus_building_table.innerHTML = "";
 
+                        console.log(building['floors']);
+
                         Array.from(building['floors']).foreach(floor => {
+                            campus_building_table += '<tr><td class="floor">' +  floor['name'] + '</td>' +'<td>' + floor['desc'] + '</td></tr>';          
+                        });
+
+                        building['floors'].foreach(floor => {
                             campus_building_table += '<tr><td class="floor">' +  floor['name'] + '</td>' +'<td>' + floor['desc'] + '</td></tr>';          
                         });
 
