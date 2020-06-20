@@ -65,7 +65,7 @@ campus_map_wrapper.onclick =  function(event) {
             
             if (pixelData[3] != 0 
                     && element.dataset.id != "campus_floor") {
-                        
+
                 const canvas_list = campus_map_wrapper.children;
 
                 Array.from(canvas_list).forEach(canvas => {
@@ -74,6 +74,9 @@ campus_map_wrapper.onclick =  function(event) {
                 
                 element.classList.remove('hover');
                 element.classList.add('clicked');
+
+
+                
             }
         }
     });

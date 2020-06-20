@@ -18,6 +18,7 @@
     width: 800PX;
     margin-top: 96px;
     filter: brightness(70%);
+    transition: all 0.5s;
 }
 
 #campus_map_wrapper > canvas.hover {
