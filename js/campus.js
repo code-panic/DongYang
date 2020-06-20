@@ -18,6 +18,8 @@ function addCanvasImage(src) {
 
     campus_map_wrapper.appendChild(canvas);
 
+    //data-id 설정 코드 
+
     const tmp_image = new Image();
     tmp_image.src = src;
 
@@ -50,6 +52,8 @@ campus_map_wrapper.addEventListener('mousemove', function(event) {
 //mouse 클릭 애니메이션 처리하기 
 campus_map_wrapper.addEventListener('mouseclick', function(event) {
     const elements = document.elementsFromPoint(event.clientX, event.clientY);
+
+    console.log("a");
 
     Array.from(elements).forEach(element => {
         if(element.tagName == "CANVAS") {
