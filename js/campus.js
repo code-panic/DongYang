@@ -96,6 +96,8 @@ campus_map_wrapper.onclick =  function(event) {
                         
                         campus_building_table.innerHTML = "";
 
+                        
+
                         // console.log(building['floors']);
                         // console.log(Array.isArray(building['floors']));
 
@@ -104,10 +106,15 @@ campus_map_wrapper.onclick =  function(event) {
                         // });
 
                         // building['floors'].foreach(floor => {
-                        //     campus_building_table += '<tr><td class="floor">' +  floor['name'] + '</td>' +'<td>' + floor['desc'] + '</td></tr>';          
+                        //     campus_building_table.innerHTML += '<tr><td class="floor">' +  floor['name'] + '</td>' +'<td>' + floor['desc'] + '</td></tr>';          
                         // });
 
-                        for (let i = 0; i < building['floors']; i++) {
+                        
+                        console.log(building['floors'][0]);
+
+                        let i;
+
+                        for (i = 0; i < building['floors']; i++) {
                             console.log(building['floors'][i]);
                             console.log(building['floors'][i][name]);
                             campus_building_table.innerHTML += '<tr><td class="floor">' +  building['floors'][i]['name'] + '</td>' +'<td>' + building['floors'][i]['desc'] + '</td></tr>';          
