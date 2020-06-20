@@ -61,13 +61,13 @@ campus_map_wrapper.onclick =  function(event) {
             const pixelData = element.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;
             
             if (pixelData[3] != 0) {
+                const canvas_list = campus_map_wrapper.children;
+
                 Array.from(canvas_list).forEach(canvas => {
                     canvas.classList.remove('clicked');
                 });
                 
                 element.classList.add('clicked');
-                
-                
             }
         }
     });
