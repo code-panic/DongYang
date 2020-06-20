@@ -97,7 +97,7 @@ campus_map_wrapper.onclick =  function(event) {
 
                 campusObj['bulidings'].forEach(building => {
                     if(element.dataset.id == building['id']) {
-                        campus_building_desc_cont.style.animation = 'campus_building_desc_cont 1s';
+                        campus_building_desc_cont.style.animation = 'campus_building_desc_cont_change 1s';
 
                         campus_building_name.textContent = building['name'];
                         campus_building_desc.textContent = building['desc'];
