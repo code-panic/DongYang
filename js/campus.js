@@ -108,7 +108,7 @@ campus_map_wrapper.onclick =  function(event) {
                         // });
 
                         for (let i = 0; i < building['floors']; i++) {
-                            campus_building_table += '<tr><td class="floor">' +  building['floors'][i]['name'] + '</td>' +'<td>' + building['floors'][i]['desc'] + '</td></tr>';          
+                            campus_building_table.innerHTML += '<tr><td class="floor">' +  building['floors'][i]['name'] + '</td>' +'<td>' + building['floors'][i]['desc'] + '</td></tr>';          
                         }
 
                         return;
