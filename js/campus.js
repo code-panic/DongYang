@@ -39,9 +39,12 @@ function addCanvasImage(src) {
     //data-id 설정 코드 
     canvas.setAttribute('data-id', src.split("/")[2].split(".")[0]);
 
+    console.log(canvas.dataset.id);
     if(canvas.dataset.id == "canvas_building_1") {
-        canvas.classList.add('clicked');
+        canvas.classList.add("clicked");
+        console.log("setting!");
     }
+
 
     const tmp_image = new Image();
     tmp_image.src = src;
@@ -112,7 +115,6 @@ campus_map_wrapper.onclick =  function(event) {
                             tmp_html += "<tr><td class=floor>" + floor['name'] + "</td><td>" + floor['desc'] + "</td></tr>" 
                         });
 
-                        console.log(tmp_html);
                         campus_building_floors.innerHTML = tmp_html;
 
                         return;
