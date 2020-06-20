@@ -94,15 +94,13 @@ campus_map_wrapper.onclick =  function(event) {
                         campus_building_name.textContent = building['name'];
                         campus_building_desc.textContent = building['desc'];
                         
-                        campus_building_table.innerHTML = "";
-                        
-                        console.log(Array.isArray(building['floors']));
+                        let tmp_html;
 
                         building['floors'].forEach(floor => {
-                            console.log(floor['name']);
-                            console.log(floor['desc']);
-                            campus_building_table.innerHTML += "<tr><td class=&#34;floor&#34;>" + floor['name'] + "</td><td>" + floor['desc'] + "</td><tr>" 
+                            tmp_html += "<tr><td class=&#34;floor&#34;>" + floor['name'] + "</td><td>" + floor['desc'] + "</td><tr>" 
                         });
+
+                        campus_building_table.innerHTML = tmp_html;
 
                         return;
                     }
