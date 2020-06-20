@@ -98,7 +98,12 @@ campus_map_wrapper.onclick =  function(event) {
                         
                         console.log(Array.isArray(building['floors']));
 
-                        (building['floors']).forEach(floor => {
+                        // (building['floors']).forEach(floor => {
+                        //     console.log(floor['name']);
+                        //     console.log(floor['desc']);
+                        // });
+
+                        building['floors'].forEach(floor => {
                             console.log(floor['name']);
                             console.log(floor['desc']);
                         });
