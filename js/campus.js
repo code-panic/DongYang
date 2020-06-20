@@ -37,7 +37,10 @@ campus_map_wrapper.addEventListener('mousemove', function(event) {
         if(element.tagName == "CANVAS") {
             const pixelData = element.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;
             
-            if (pixelData[3] != 0 && !element.classList.contains('clicked')) {
+            if (pixelData[3] != 0 
+                    && !element.classList.contains('clicked') 
+                    && element.dataset.id != "campus_floor") {
+                
                 const canvas_list = campus_map_wrapper.children;
 
                 Array.from(canvas_list).forEach(canvas => {
@@ -60,13 +63,16 @@ campus_map_wrapper.onclick =  function(event) {
         if(element.tagName == "CANVAS") {
             const pixelData = element.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;
             
-            if (pixelData[3] != 0) {
+            if (pixelData[3] != 0 
+                    && element.dataset.id != "campus_floor") {
+                        
                 const canvas_list = campus_map_wrapper.children;
 
                 Array.from(canvas_list).forEach(canvas => {
                     canvas.classList.remove('clicked');
                 });
                 
+                element.classList.remove('hover');
                 element.classList.add('clicked');
             }
         }
