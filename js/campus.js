@@ -43,7 +43,6 @@ function addCanvasImage(src) {
         canvas.classList.add("clicked");
     }
 
-
     const tmp_image = new Image();
     tmp_image.src = src;
 
