@@ -4,7 +4,7 @@ const campus_map_wrapper = document.getElementById("campus_map_wrapper");
 
 const campus_building_name = document.getElementById("campus_building_name");
 const campus_building_desc = document.getElementById("campus_building_desc");
-const campus_building_floors = document.getElementById("campus_building_flooors");
+const campus_building_floors = document.getElementById("campus_building_floors");
 
 let campusObj;
 
