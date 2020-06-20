@@ -94,7 +94,7 @@ campus_map_wrapper.onclick =  function(event) {
                         campus_building_name.textContent = building['name'];
                         campus_building_desc.textContent = building['desc'];
                         
-                        let tmp_html;
+                        let tmp_html = 0;
 
                         building['floors'].forEach(floor => {
                             tmp_html += "<tr><td class=&#34;floor&#34;>" + floor['name'] + "</td><td>" + floor['desc'] + "</td><tr>" 
