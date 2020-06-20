@@ -39,6 +39,10 @@ function addCanvasImage(src) {
     //data-id 설정 코드 
     canvas.setAttribute('data-id', src.split("/")[2].split(".")[0]);
 
+    if(canvas.dataset.id == "canvas_building_1") {
+        canvas.classList.add('clicked');
+    }
+
     const tmp_image = new Image();
     tmp_image.src = src;
 
