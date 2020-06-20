@@ -4,7 +4,7 @@ const campus_map_wrapper = document.getElementById("campus_map_wrapper");
 
 const campus_building_name = document.getElementById("campus_building_name");
 const campus_building_desc = document.getElementById("campus_building_desc");
-const campus_building_table = document.getElementById("campus_building_table");
+const campus_building_floors = document.getElementById("campus_building_flooors");
 
 let campusObj;
 
@@ -94,14 +94,14 @@ campus_map_wrapper.onclick =  function(event) {
                         campus_building_name.textContent = building['name'];
                         campus_building_desc.textContent = building['desc'];
                         
-                        let tmp_html = 0;
+                        let tmp_html = '';
 
                         building['floors'].forEach(floor => {
-                            tmp_html += "<tr><td class=&#34;floor&#34;>" + floor['name'] + "</td><td>" + floor['desc'] + "</td><tr>" 
+                            tmp_html += "<tr><td class=floor>" + floor['name'] + "</td><td>" + floor['desc'] + "</td></tr>" 
                         });
 
                         console.log(tmp_html);
-                        campus_building_table.innerHTML = tmp_html;
+                        campus_building_floors.innerHTML = tmp_html;
 
                         return;
                     }
