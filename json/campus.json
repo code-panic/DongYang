@@ -5,8 +5,8 @@
             "name": "1호관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "name": "2F",  "desc": "강의실, NCS 교육운영지원센터"  },
                 { "name": "1F",  "desc": "강의실" },
+                { "name": "2F",  "desc": "강의실, NCS 교육운영지원센터"  },
                 { "name": "3F",  "desc": "강의실, 교양과" },
                 { "name": "4F",  "desc": "학생서비스센터, 산학협력처" },
                 { "name": "5F",  "desc": "사무처, 소강당" },
@@ -35,8 +35,8 @@
             "name": "2호관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "name": "지하2F",  "desc": "강의실" },
-                { "name": "지하1F",  "desc": "강의실" },
+                { "name": "B2F",  "desc": "강의실" },
+                { "name": "B1F",  "desc": "강의실" },
                 { "name": "1F",  "desc": "전산실습실" },
                 { "name": "2F",  "desc": "전산실습실, 강의실" },
                 { "name": "3F",  "desc": "경영학부, 전산실습실" },
@@ -63,7 +63,7 @@
             "name": "4호관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "name": "지하1F",  "desc": "실습실" },
+                { "name": "B1F",  "desc": "실습실" },
                 { "name": "1F",  "desc": "실습실, 샤워실" },
                 { "name": "2F",  "desc": "기계공학부, 로봇자동화공학부" },
                 { "name": "3F",  "desc": "생명화공과, 실습실" },
@@ -87,9 +87,9 @@
             "name": "6호관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "name": "지하3F",  "desc": "강당, 휘트니스센터" },
-                { "name": "지하2F",  "desc": "동양미디어, 인쇄실" },
-                { "name": "지하1F",  "desc": "이벤트홀, 강의실" },
+                { "name": "B3F",  "desc": "강당, 휘트니스센터" },
+                { "name": "B2F",  "desc": "동양미디어, 인쇄실" },
+                { "name": "B1F",  "desc": "이벤트홀, 강의실" },
                 { "name": "1F",  "desc": "갤러리, 강의실" },
                 { "name": "2F",  "desc": "시각정디자인과, 실내환경디자인과" },
                 { "name": "3F",  "desc": "강의실" },
@@ -102,7 +102,7 @@
             "name": "7호관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "name": "지하1F",  "desc": "실습실" },
+                { "name": "B1F",  "desc": "실습실" },
                 { "name": "1F",  "desc": "전산실습실" },
                 { "name": "2F",  "desc": "강의실, 설계실" },
                 { "name": "3F",  "desc": "건축과, 교수연구실" },
@@ -115,7 +115,7 @@
             "name": "8호관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "name": "지하1F",  "desc": "주차장" },
+                { "name": "B1F",  "desc": "주차장" },
                 { "name": "1F",  "desc": "편의점, 카페, 국민은행" },
                 { "name": "2F",  "desc": "서점, 문구점" },
                 { "name": "3F",  "desc": "학생식당, 교직원식당" }

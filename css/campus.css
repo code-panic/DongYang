@@ -30,6 +30,21 @@
     filter: brightness(100%);
 }
 
+
+@keyframes campus_building_desc_cont_change {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
 #campus_building_name {
     font-size: 48px;
     font-weight: bold;
