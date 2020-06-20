@@ -30,6 +30,13 @@
     filter: brightness(100%);
 }
 
+#campus_map_wrapper > canvas.hoverSurrounding {
+    opacity: 0.5;
+}
+
+#campus_map_wrapper > canvas.clickedSurrounding {
+    opacity: 0.5;
+}
 
 @keyframes campus_building_desc_cont_change {
     from {
