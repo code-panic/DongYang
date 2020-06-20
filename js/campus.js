@@ -97,6 +97,10 @@ campus_map_wrapper.addEventListener('mousemove', function(event) {
                         }
                     } else if (element.dataset.id == "campus_building_9") {
                         campus_floor.classList.add("hoverSurrounding");
+
+                        if (canvas.dataset.id == "campus_building_5"  && !canvas.classList.contains("clicked")) {
+                            canvas.classList.add("hoverSurrounding");
+                        }
                     }
                 });
 
@@ -147,6 +151,10 @@ campus_map_wrapper.onclick =  function(event) {
                         }
                     } else if (element.dataset.id == "campus_building_9") {
                         campus_floor.classList.add("clickedSurrounding");
+
+                        if (canvas.dataset.id == "campus_building_5") {
+                            canvas.classList.add("clickedSurrounding");
+                        }
                     }
                 });
                 
