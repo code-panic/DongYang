@@ -96,7 +96,12 @@ campus_map_wrapper.onclick =  function(event) {
                         campus_building_name.textContent = building['name'];
                         campus_building_desc.textContent = building['desc'];
                         
+                        campus_building_table.innerHTML = "";
 
+                        building['floors'].foreach(floor => {
+                            campus_building_table += '<tr><td class="floor">' +  floor['name'] + '</td>' +'<td>' + floor['desc'] + '</td></tr>'            
+                        });
+                
                         return;
                     }
                 });

@@ -5,16 +5,16 @@
             "name": "1호관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "floor": "1F",  "name": "강의실" },
-                { "floor": "2F",  "name": "강의실, NCS 교육운영지원센터"  },
-                { "floor": "3F",  "name": "강의실, 교양과" },
-                { "floor": "4F",  "name": "학생서비스센터, 산학협력처" },
-                { "floor": "5F",  "name": "사무처, 소강당" },
-                { "floor": "6F",  "name": "강의실" },
-                { "floor": "7F",  "name": "강의실" },
-                { "floor": "8F",  "name": "총장실" },
-                { "floor": "9F",  "name": "법인사무국" },
-                { "floor": "10F", "name": "기획처" }
+                { "name": "2F",  "desc": "강의실, NCS 교육운영지원센터"  },
+                { "name": "1F",  "desc": "강의실" },
+                { "name": "3F",  "desc": "강의실, 교양과" },
+                { "name": "4F",  "desc": "학생서비스센터, 산학협력처" },
+                { "name": "5F",  "desc": "사무처, 소강당" },
+                { "name": "6F",  "desc": "강의실" },
+                { "name": "7F",  "desc": "강의실" },
+                { "name": "8F",  "desc": "총장실" },
+                { "name": "9F",  "desc": "법인사무국" },
+                { "name": "10F", "desc": "기획처" }
             ]
         },
         {
@@ -22,12 +22,12 @@
             "name": "도서관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "floor": "1F",  "name": "일반열람실" },
-                { "floor": "2F",  "name": "어문학자료실" },
-                { "floor": "3F",  "name": "과학기술자료실" },
-                { "floor": "4F",  "name": "정보검색실, 도서관사무실" },
-                { "floor": "5F",  "name": "전자자료실, 전산소" },
-                { "floor": "6F",  "name": "인문사회자료실" }
+                { "name": "1F",  "desc": "일반열람실" },
+                { "name": "2F",  "desc": "어문학자료실" },
+                { "name": "3F",  "desc": "과학기술자료실" },
+                { "name": "4F",  "desc": "정보검색실, 도서관사무실" },
+                { "name": "5F",  "desc": "전자자료실, 전산소" },
+                { "name": "6F",  "desc": "인문사회자료실" }
             ]
         },
         {
@@ -35,15 +35,15 @@
             "name": "2호관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "floor": "지하2F",  "name": "강의실" },
-                { "floor": "지하1F",  "name": "강의실" },
-                { "floor": "1F",  "name": "전산실습실" },
-                { "floor": "2F",  "name": "전산실습실, 강의실" },
-                { "floor": "3F",  "name": "경영학부, 전산실습실" },
-                { "floor": "4F",  "name": "교수학습개발센터" },
-                { "floor": "5F",  "name": "교수연구실" },
-                { "floor": "6F",  "name": "교수연구실" },
-                { "floor": "7F",  "name": "교수연구실" }
+                { "name": "지하2F",  "desc": "강의실" },
+                { "name": "지하1F",  "desc": "강의실" },
+                { "name": "1F",  "desc": "전산실습실" },
+                { "name": "2F",  "desc": "전산실습실, 강의실" },
+                { "name": "3F",  "desc": "경영학부, 전산실습실" },
+                { "name": "4F",  "desc": "교수학습개발센터" },
+                { "name": "5F",  "desc": "교수연구실" },
+                { "name": "6F",  "desc": "교수연구실" },
+                { "name": "7F",  "desc": "교수연구실" }
             ]
         },
         {
@@ -51,11 +51,11 @@
             "name": "3호관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "floor": "1F",  "name": "총학생회, 보건실, 학생 커뮤니티 공간" },
-                { "floor": "2F",  "name": "컴퓨터공학부, 전산실습실" },
-                { "floor": "3F",  "name": "전산실습실" },
-                { "floor": "4F",  "name": "전기전자통신공학부, 실습실" },
-                { "floor": "5F",  "name": "실습실" }
+                { "name": "1F",  "desc": "총학생회, 보건실, 학생 커뮤니티 공간" },
+                { "name": "2F",  "desc": "컴퓨터공학부, 전산실습실" },
+                { "name": "3F",  "desc": "전산실습실" },
+                { "name": "4F",  "desc": "전기전자통신공학부, 실습실" },
+                { "name": "5F",  "desc": "실습실" }
             ]
         },
         {
@@ -63,13 +63,13 @@
             "name": "4호관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "floor": "지하1F",  "name": "실습실" },
-                { "floor": "1F",  "name": "실습실, 샤워실" },
-                { "floor": "2F",  "name": "기계공학부, 로봇자동화공학부" },
-                { "floor": "3F",  "name": "생명화공과, 실습실" },
-                { "floor": "4F",  "name": "실습실" },
-                { "floor": "5F",  "name": "실습실" },
-                { "floor": "6F",  "name": "동아리실" }
+                { "name": "지하1F",  "desc": "실습실" },
+                { "name": "1F",  "desc": "실습실, 샤워실" },
+                { "name": "2F",  "desc": "기계공학부, 로봇자동화공학부" },
+                { "name": "3F",  "desc": "생명화공과, 실습실" },
+                { "name": "4F",  "desc": "실습실" },
+                { "name": "5F",  "desc": "실습실" },
+                { "name": "6F",  "desc": "동아리실" }
             ]
         },
         {
@@ -77,9 +77,9 @@
             "name": "5호관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "floor": "1F",  "name": "-" },
-                { "floor": "2F",  "name": "-" },
-                { "floor": "3F",  "name": "융헙실험기술개발센터" }
+                { "name": "1F",  "desc": "-" },
+                { "name": "2F",  "desc": "-" },
+                { "name": "3F",  "desc": "융헙실험기술개발센터" }
             ]
         },
         {
@@ -87,14 +87,14 @@
             "name": "6호관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "floor": "지하3F",  "name": "강당, 휘트니스센터" },
-                { "floor": "지하2F",  "name": "동양미디어, 인쇄실" },
-                { "floor": "지하1F",  "name": "이벤트홀, 강의실" },
-                { "floor": "1F",  "name": "갤러리, 강의실" },
-                { "floor": "2F",  "name": "시각정디자인과, 실내환경디자인과" },
-                { "floor": "3F",  "name": "강의실" },
-                { "floor": "4F",  "name": "강의실" },
-                { "floor": "5F",  "name": "교수연구실" }
+                { "name": "지하3F",  "desc": "강당, 휘트니스센터" },
+                { "name": "지하2F",  "desc": "동양미디어, 인쇄실" },
+                { "name": "지하1F",  "desc": "이벤트홀, 강의실" },
+                { "name": "1F",  "desc": "갤러리, 강의실" },
+                { "name": "2F",  "desc": "시각정디자인과, 실내환경디자인과" },
+                { "name": "3F",  "desc": "강의실" },
+                { "name": "4F",  "desc": "강의실" },
+                { "name": "5F",  "desc": "교수연구실" }
             ]
         },
         {
@@ -102,12 +102,12 @@
             "name": "7호관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "floor": "지하1F",  "name": "실습실" },
-                { "floor": "1F",  "name": "전산실습실" },
-                { "floor": "2F",  "name": "강의실, 설계실" },
-                { "floor": "3F",  "name": "건축과, 교수연구실" },
-                { "floor": "4F",  "name": "강의실, 설계실, 동아리실" },
-                { "floor": "5F",  "name": "실습실, 동아리실" }
+                { "name": "지하1F",  "desc": "실습실" },
+                { "name": "1F",  "desc": "전산실습실" },
+                { "name": "2F",  "desc": "강의실, 설계실" },
+                { "name": "3F",  "desc": "건축과, 교수연구실" },
+                { "name": "4F",  "desc": "강의실, 설계실, 동아리실" },
+                { "name": "5F",  "desc": "실습실, 동아리실" }
             ]
         },
         {
@@ -115,10 +115,10 @@
             "name": "8호관",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "floors": [
-                { "floor": "지하1F",  "name": "주차장" },
-                { "floor": "1F",  "name": "편의점, 카페, 국민은행" },
-                { "floor": "2F",  "name": "서점, 문구점" },
-                { "floor": "3F",  "name": "학생식당, 교직원식당" }
+                { "name": "지하1F",  "desc": "주차장" },
+                { "name": "1F",  "desc": "편의점, 카페, 국민은행" },
+                { "name": "2F",  "desc": "서점, 문구점" },
+                { "name": "3F",  "desc": "학생식당, 교직원식당" }
             ]
         }
     ]
