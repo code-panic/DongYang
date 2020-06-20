@@ -100,6 +100,7 @@ campus_map_wrapper.onclick =  function(event) {
                             tmp_html += "<tr><td class=&#34;floor&#34;>" + floor['name'] + "</td><td>" + floor['desc'] + "</td><tr>" 
                         });
 
+                        console.log(tmp_html);
                         campus_building_table.innerHTML = tmp_html;
 
                         return;
