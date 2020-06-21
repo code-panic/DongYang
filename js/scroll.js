@@ -1,3 +1,5 @@
+const titles = document.getElementsByClassName("title");
+
 const intro_name_wrapper = document.getElementById("intro_name_wrapper");
 const intro_desc_wrapper = document.getElementById("intro_desc_wrapper");
 
@@ -10,6 +12,11 @@ window.onscroll = function() {
     } else {
         nav.classList.remove("nav_scrolled");
     }
+
+    // 타이틀 애니메이션 처리
+    Array.from(titles).forEach(title => {
+        scrollElement(title);
+    });
 
     // intro 애니메이션 처리
     scrollElement(intro_name_wrapper);

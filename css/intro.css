@@ -10,6 +10,14 @@
     font-size: 36px;
     padding-top: 96px;
     margin-bottom: 96px;
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: all 0.5s;
+}
+
+.title.showed {
+    opacity: 1;
+    transform: translateX(0%);
 }
 
 #intro_desc_cont {
@@ -81,15 +89,12 @@
     height: 800px;
     position: relative;
     opacity: 0;
-    transform: translateY(10%);
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 #promo.showed {
     opacity: 1;
-    transform: translateY(0%);
 }
-
 
 #promo_bg {
     position: absolute;
@@ -146,7 +151,8 @@
     flex: 1;
 }
 
-.promo_number {
+#promo_student_number,
+#promo_professor_number {
     color: #005298;
     font-size: 64px;
     font-weight: bold;
