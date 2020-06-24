@@ -1,12 +1,11 @@
 @media screen and (max-width: 1408px) {
     #campus {
-        height: 600px;
+        height: 800px;
     }
 
     #campus_map_wrapper {
-        overflow: hidden;
-        position: relative;
-        width: 100%;
+        /* 나중에 고치자 */
+        height: 204px;
     }
 
     #campus > div{
