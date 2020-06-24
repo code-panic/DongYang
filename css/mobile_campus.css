@@ -1,0 +1,40 @@
+@media screen and (max-width: 1408px) {
+    #campus {
+        height: 600px;
+    }
+
+    #campus_map_wrapper {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    #campus > div{
+        width: 280px;
+        display: block;
+    }
+
+    #campus_map_wrapper > canvas {
+        width: 280px;
+        margin: 24px 0px;
+    }
+
+    #campus_building_name {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    #campus_building_desc {
+        font-size: 12px;
+        width: 280px;
+        margin-bottom: 24px;
+    }
+
+    #campus_building_table {
+        font-size: 12px;
+    } 
+
+    .floor {
+        padding-bottom: 12px;
+    }
+}

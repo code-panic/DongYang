@@ -1,0 +1,57 @@
+@media screen and (max-width: 1408px) {
+    .title {
+        font-size: 16px;
+        width: 280px;
+        margin-bottom: 36px;
+    }
+    
+    #intro_desc_cont {
+        width: 280px;
+        margin-bottom: 24px;
+    }
+
+    #intro_name_wrapper {
+        display: none;
+    }
+
+    #intro_desc_main {
+        font-size: 12px;
+        margin-bottom: 24px;
+    }
+
+    #intro_desc_detail {
+        font-size: 12px;
+    }
+
+    #promo {
+        height: 320px;
+    }
+
+    #promo_contents {
+        width: 280px;
+    }
+
+    #promo_video_wrapper {
+        display: none;
+    }
+
+    #promo_desc_cont > div {
+        position: relative;
+    }
+
+    #promo_student_number,
+    #promo_professor_number {
+        font-size: 32px;
+        margin-bottom: 0px;
+    }
+
+    .promo_number_desc {
+        font-size: 12px;
+    }
+
+    #promo_desc {
+        margin-top: 24px;
+        font-size: 12px;
+    }
+
+}
