@@ -1,3 +1,15 @@
+const nav = document.getElementsByTagName("nav")[0];
+
+const nav_button_to_main = document.getElementById("nav_button_to_main");
+const nav_button_to_intro = document.getElementById("nav_button_to_intro");
+const nav_button_to_major = document.getElementById("nav_button_to_major");
+const nav_button_to_campus = document.getElementById("nav_button_to_campus");
+
+const main_offsetTop = document.getElementById("main").offsetTop;
+const intro_offsetTop = document.getElementById("intro").offsetTop;
+const major_offsetTop = document.getElementById("major").offsetTop;
+const campus_offsetTop = document.getElementById("campus").offsetTop;
+
 const titles = document.getElementsByClassName("title");
 
 const intro_name_wrapper = document.getElementById("intro_name_wrapper");
@@ -15,11 +27,24 @@ let promo_professor_number_id;
 let promo_professor_number_isShowed = false;
 
 window.onscroll = function() {
-    // nav 배경처리 
+    /* 스크롤이 맨 위에 있을 때는 그라데이션 배경색 아닐 때는 단일 배경색 */
     if (window.scrollY > nav.offsetHeight) {
-        nav.classList.add("nav_scrolled");
+        nav.classList.add("scrolled");
     } else {
-        nav.classList.remove("nav_scrolled");
+        nav.classList.remove("scrolled");
+    }
+
+    removeNavActiveAll();
+
+    /* 네비게이션 하이라이트 변화 처리 */
+    if (window.scrollY <= main_offsetTop) {
+        nav_button_to_main.classList.add("active");
+    } else if (window.scrollY <= intro_offsetTop) {
+        nav_button_to_intro.classList.add("active");
+    } else if (window.scrollY <= major_offsetTop) {
+        nav_button_to_major.classList.add("active");
+    } else {
+        nav_button_to_campus.classList.add("active");
     }
 
     // 타이틀 애니메이션 처리

@@ -1,18 +1,17 @@
-const nav = document.getElementsByTagName("nav")[0];
-const nav_link_list = document.getElementById("nav_links").children;
+const nav_link_list = Array.from(document.getElementById("nav_links").children);
 
-Array.from(nav_link_list).forEach(nav_link => {
-    nav_link.addEventListener("click", function() {
-        clickNavLink(nav_link)
-    });
+/* 네비게이션 버튼 클릭 이벤트 등록 (누르면 하이라이트 들어감) */
+nav_link_list.forEach(nav_link => {
+    nav_link.onclick = function(event){
+        removeNavActiveAll();
+
+        nav_link.classList.add("active");
+    }
 });
 
-function clickNavLink(nav_link) {
-    Array.from(nav_link_list).forEach(nav_link => {
-        nav_link.classList.remove("nav_active")
+/* 네비게이션 모든 버튼의 활성화 클래스를 지움 */
+function removeNavActiveAll() {
+    nav_link_list.forEach(nav_link => {
+        nav_link.classList.remove("active")
     });
-
-    nav_link.classList.add("nav_active");
-
-    // console.log(nav_link.dataset.id);
 }

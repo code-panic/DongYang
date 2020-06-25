@@ -13,7 +13,7 @@ nav {
     transition: background 0.5s;
 }
 
-.nav_scrolled {
+nav.scrolled {
     background-color: #141414;
 }
 
@@ -50,15 +50,15 @@ nav > div {
     transition: opacity 0.5s;
 }
 
-#nav_links li:hover:not(.nav_active) {
-    opacity: 60%;
+#nav_links li:hover:not(.active) {
+    opacity: 50%;
 }
 
 #nav_links a  {
     color: #eeeeee;
 }
 
-.nav_active a {   
+#nav_links li.active a {   
     color: #ffffff;
     font-weight: bold;
 }

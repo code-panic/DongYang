@@ -1,0 +1,16 @@
+nav {
+    height: 40px;
+}
+
+nav > div{
+    width: 280px;
+}
+
+#nav_logo {
+    height: 16px;
+}
+
+#nav_links li {
+    margin-left: 16px;
+    font-size: 8px;
+}
