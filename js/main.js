@@ -1,3 +1,4 @@
+let isComputer = (window.innerWidth > 1408)? true : false;
 let isPlaying = false;
 
 const main_video = document.getElementById("main_video");
@@ -8,68 +9,55 @@ const main_desc_wrapper = document.getElementById("main_desc_wrapper");
 
 let play_interval_id;
 let desc_interval_id;
-let volume_interval_id;
 
-main_video.volume = 0;
+/* 볼륨 0으로 설정, 이렇지 않으면 정책에 위반되서 에러 터진다 */
+main_video.muted = true;
 
+/* 3초마다 스크롤 위치를 계산해서 동영상을 플레이 할지를 정한다 */
 play_interval_id = setInterval(function() {
     if (window.scrollY < nav.offsetHeight) {
-        main_video.play();
-        main_bg.style.opacity = 0;
         isPlaying = true;
-
-        // volume_interval_id = setInterval(function() {
-        //     // main_video.volume = Int(lerp(main_video, 1, 0.2));
-
-        //     if (main_video.volume >= 0.8) {
-        //         main_video.volume = 1; 
-        //         clearInterval(volume_interval_id);
-        //     }
-
-        //     main_video.volume += 0.1;
-        //     console.log(main_video.volume);
-
-        // }, 100);
-
-        // main_video.muted = false;
-        // main_video.volume = 1;
+        
+        main_video.play();
+        main_bg.classList.add("invisiable");
     } else {
-        main_video.pause();
-        main_bg.style.opacity = 100;
         isPlaying = false;
 
-        main_video.volume = 0;
+        main_video.pause();
+        main_bg.classList.remove("invisiable");
+    }
+
+    console.log(isComputer);
+}, 3000);
+
+/* 5초마다 동영상 재생 상황을 파악해 자세한 설명을 보일지 결정한다 */
+desc_interval_id = setInterval(function() {
+    if (isPlaying) {
+        if (isComputer) {
+            main_logo.classList.add("smaller")
+        }
+
+        main_desc_wrapper.classList.add("invisiable");
+
+    } else if (!isPlaying) {
+        if (isComputer) {
+            main_logo.classList.remove("smaller")
+        }
+
+        main_desc_wrapper.classList.remove("invisiable");
     }
 }, 5000);
 
-desc_interval_id = setInterval(function() {
-    // console.log("check");
-
-    if (isPlaying) {
-        main_logo.style.height = "120px";
-        main_desc_wrapper.style.opacity = 0;
-        main_desc_wrapper.style.transform = "translateY(100%)";
-        main_desc_wrapper.style.display = "none";
-    } else if (!isPlaying) {
-        main_logo.style.height = "144px";
-        main_desc_wrapper.style.opacity = 100;
-        main_desc_wrapper.style.transform = "translateY(0)";
-        main_desc_wrapper.style.display = "block";
-    }
-}, 10000);
-
+/* 비디오가 끝나면 비디오와 관련한 setInterval 함수를 모두 종료하고 첫 화면으로 돌아간다 */
 main_video.onended = function() {
     clearInterval(play_interval_id);
     clearInterval(desc_interval_id);
 
-    main_bg.style.opacity = 100;
+    main_bg.classList.remove("invisiable");
 
-    main_logo.style.height = "144px";
-    main_desc_wrapper.style.opacity = 100;
-    main_desc_wrapper.style.transform = "translateY(0)";
-    main_desc_wrapper.style.display = "block";
+    if (isComputer) {
+        main_logo.classList.remove("smaller");
+    } 
+
+    main_desc_wrapper.classList.remove("invisiable");
 }
-
-// function lerp (start, end, step) {
-//     return (end - start) * step + start;
-// }

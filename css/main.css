@@ -21,8 +21,9 @@ html, body {
 #main_video {
     position: absolute;
     z-index: 0;
-    top: 0px;
-    left: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     min-width: 100%;
     min-height: 100%;
     width: auto;
@@ -35,6 +36,10 @@ html, body {
     height: 100%;
     object-fit: cover;
     transition: opacity 0.5s;
+}
+
+#main_bg.invisiable {
+    opacity: 0;
 }
 
 #main_bg_cover {
@@ -66,12 +71,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66141414', e
     display: block;
     height: 144px;
     margin-bottom: 48px;
-    transition: height 2s;
+    transition: height 0.5s;
 }
 
+#main_logo.smaller {
+    height: 120px;
+}
 
 #main_desc_wrapper {
-    transition: all 2s;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+#main_desc_wrapper.invisiable {
+    display: none;
 }
 
 #main_top {
