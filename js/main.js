@@ -27,7 +27,6 @@ play_interval_id = setInterval(function() {
         main_bg.classList.remove("invisiable");
     }
 
-    console.log(isComputer);
 }, 3000);
 
 /* 5초마다 동영상 재생 상황을 파악해 자세한 설명을 보일지 결정한다 */

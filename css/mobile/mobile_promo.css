@@ -1,0 +1,32 @@
+#promo {
+    height: 320px;
+}
+
+#promo_content_cont {
+    width: 280px;
+}
+
+#promo_video_wrapper {
+    display: none;
+}
+
+#promo_desc_cont > div {
+    position: relative;
+}
+
+#promo_number_student,
+#promo_number_professor {
+    font-size: 32px;
+    margin-bottom: 0px;
+}
+
+.promo_number_desc {
+    font-size: 12px;
+}
+
+#promo_desc {
+    margin-top: 24px;
+    font-size: 12px;
+}
+
+}

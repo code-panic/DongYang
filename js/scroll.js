@@ -10,21 +10,14 @@ const intro_offsetTop = document.getElementById("intro").offsetTop;
 const major_offsetTop = document.getElementById("major").offsetTop;
 const campus_offsetTop = document.getElementById("campus").offsetTop;
 
-const titles = document.getElementsByClassName("title");
+const promo_number_student = document.getElementById("promo_number_student");
+const promo_number_professor = document.getElementById("promo_number_professor");
 
-const intro_name_wrapper = document.getElementById("intro_name_wrapper");
-const intro_desc_wrapper = document.getElementById("intro_desc_wrapper");
+let promo_number_student_intervalId;
+let promo_number_student_isInvisiable = true;
 
-const promo = document.getElementById("promo");
-
-const promo_student_number = document.getElementById("promo_student_number");
-const promo_professor_number = document.getElementById("promo_professor_number");
-
-let promo_student_number_id;
-let promo_student_number_isShowed = false;
-
-let promo_professor_number_id;
-let promo_professor_number_isShowed = false;
+let promo_number_professor_intervalId;
+let promo_number_professor_isInvisiable = true;
 
 window.onscroll = function() {
     /* 스크롤이 맨 위에 있을 때는 그라데이션 배경색 아닐 때는 단일 배경색 */
@@ -36,7 +29,7 @@ window.onscroll = function() {
 
     removeNavActiveAll();
 
-    /* 네비게이션 하이라이트 변화 처리 */
+    /* 네비게이션 하이라이트 처리 */
     if (window.scrollY <= main_offsetTop) {
         nav_button_to_main.classList.add("active");
     } else if (window.scrollY <= intro_offsetTop) {
@@ -47,70 +40,45 @@ window.onscroll = function() {
         nav_button_to_campus.classList.add("active");
     }
 
-    // 타이틀 애니메이션 처리
-    Array.from(titles).forEach(title => {
-        scrollElement(title);
-    });
+    /* 홍보숫자 증가 애니메이션 처리 */
+    animatePromoNumber(promo_number_student, 
+        promo_number_student_intervalId, 
+        promo_number_student_isInvisiable,
+        6018);
 
-    // intro 애니메이션 처리
-    scrollElement(intro_name_wrapper);
-    scrollElement(intro_desc_wrapper);
+    animatePromoNumber(promo_number_professor, 
+        promo_number_professor_intervalId, 
+        promo_number_professor_isInvisiable,
+        164);
 
-    scrollElement(promo);
-
-    // 숫자 증가 애니메이션 처리 
-    const promo_student_number_rect = promo_student_number.getBoundingClientRect();
-
-    if (promo_student_number_rect.top <= window.innerHeight && promo_student_number_rect.bottom >= 0){
-        if(!promo_student_number_isShowed) {
-            promo_student_number_id = setInterval(function() {
-                promo_student_number.textContent = parseInt(lerp(parseInt(promo_student_number.textContent), 6018, 0.2));
-
-                if (parseInt(promo_student_number.textContent) > 5900) {
-                    promo_student_number.textContent = 6018;
-                    clearInterval(promo_student_number_id);
-                }
-
-            },50)
-
-            promo_student_number_isShowed = true;
-        }
-    } else {
-        promo_student_number_isShowed = false;
-        promo_student_number.textContent = 0;
-    }
-
-    const promo_professor_number_rect = promo_professor_number.getBoundingClientRect();
-
-    if (promo_professor_number_rect.top <= window.innerHeight && promo_professor_number_rect.bottom >= 0){
-        if(!promo_professor_number_isShowed) {
-            promo_professor_number_id = setInterval(function() {
-                promo_professor_number.textContent = parseInt(lerp(parseInt(promo_professor_number.textContent), 164, 0.2));
-
-                if (parseInt(promo_professor_number.textContent) > 155) {
-                    promo_professor_number.textContent = 164;
-                    clearInterval(promo_professor_number_id);
-                }
-
-            },50)
-
-            promo_professor_number_isShowed = true;
-        }
-    } else {
-        promo_professor_number_isShowed = false;
-        promo_professor_number.textContent = 0;
-    }
-
-
+    
 }
 
-function scrollElement(element) {
+/* interval 함수가 제대로 꺼지지 않는 것 같다 */
+function animatePromoNumber(element, intervalId, isInvisiable, endNumber) {
     const rect = element.getBoundingClientRect();
 
-    if (rect.top <= window.innerHeight && rect.bottom >= 0)
-        element.classList.add("showed");
-    else 
-        element.classList.remove("showed");
+    if (rect.top <= window.innerHeight && rect.bottom >= 0){
+        if(isInvisiable) {
+            setTimeout(function() {
+                intervalId = setInterval(function() {
+                    element.textContent = parseInt(lerp(parseInt(element.textContent), endNumber, 0.06));
+    
+                    if (parseInt(element.textContent) > endNumber * 0.9) {
+                        element.textContent = endNumber;
+                        clearInterval(intervalId);
+                    }
+                },120);
+            },1000);
+
+            isInvisiable = false;
+        }
+    } else {
+        isInvisiable = true;
+        element.textContent = 0;
+    }
+
+
 }
 
 function lerp (start, end, step) {
