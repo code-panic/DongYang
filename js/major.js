@@ -1,6 +1,6 @@
 const majorRequest = new XMLHttpRequest();
 
-const major_kind_list = document.getElementById("major_kind_list").children;
+const major_kind_list = Array.from(document.getElementById("major_kind_list").children);
 
 const major_desc_wrapper = document.getElementById("major_desc_wrapper");
 const major_detail_bg = document.getElementById("major_detail_bg");
@@ -22,7 +22,7 @@ majorRequest.onload = function() {
 }
 
 /* 클릭 이벤트 구현 */
-Array.from(major_kind_list).forEach(major_kind => {
+major_kind_list.forEach(major_kind => {
     // major_kind.addEventListener("click", function() {
     //     clickMajorKind(major_kind);
     // });
