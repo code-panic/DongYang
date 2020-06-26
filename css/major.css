@@ -3,45 +3,49 @@
     overflow: auto;
 }
 
-#major_kind_table {
+#major_kind_list {
     width: 1408px;
-    height: 64px;
     margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
 }
 
-#major_kind_table td{
+#major_kind_list li{
+    width: 16.6%;
+    display: inline-block;
     position: relative;
     text-align: center;
     color: #eeeeee;
     font-weight: normal;
     font-size: 24px;
     cursor: pointer;
+    padding-bottom: 24px;
     transition: all 0.5s;
 }
 
-#major_kind_table td:hover:not(.active) {
-    opacity: 0.6;
+#major_kind_list li:hover:not(.active) {
+    opacity: 0.5;
 }
 
-#major_kind_table td.active {
+#major_kind_list li.active {
     color: #ffffff;
     font-weight: bold;
 }
 
-#major_kind_table td::before {
+#major_kind_list li::before {
     content: "";
     position: absolute;
     left: 50%;
     bottom: 0px;
     transform: translateX(-50%);
     width: 0px;
-    height: 8px;
+    height: 4px;
     background-color: #ffffff;
     border-radius: 4px;
     transition: width 0.5s;
 }
 
-#major_kind_table td.active::before {
+#major_kind_list li.active::before {
     width: 48px;
 }
 
@@ -55,7 +59,7 @@
 
 #major_detail_bg {
     position: absolute;
-    height: 600px;
+    height: 100%;
     right: 0px;
 }
 
@@ -85,7 +89,7 @@
 #major_desc_cont {
     position: relative;
     width: 1408px;
-    height: 600px;
+    height: 100%;
     margin: auto;
 }
 

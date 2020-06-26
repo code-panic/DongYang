@@ -1,65 +1,71 @@
-@media screen and (max-width: 1408px) {
-    #major_kind_table {
-        width: 280px;
-    }
+#major_kind_list {
+    width: 280px;
+}
 
-    #major_kind_table td {
-        display: inline-block;
-        font-size: 12px;
-        margin-bottom: 24px;
-    }
+#major_kind_list li {
+    width: 33.3%;
+    font-size: 12px;
+}
 
-    #major_detail {
-        height: 360px;
-    }
+#major_kind_list li:nth-child(3) {
+    display: block;
+}
 
-    #major_detail_bg {
-        height: 100%;
-    }
+#major_kind_list li::before{
+    height: 2px;
+    bottom: 14px;
+}
 
-    #major_detail_bg_cover {
-        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,1+0,1+40,0.8+60,0.8+100 */
-        background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.8) 60%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.8) 60%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#cc000000',GradientType=1 ); /* IE6-9 */
+#major_kind_list li.active::before {
+    width: 24px;
+}
 
-    }
+#major_detail {
+    height: 360px;
+    margin-bottom: 48px;
+}
 
-    #major_desc_cont {
-        width: 280px;
-        height: 100%;
-    }
+#major_detail_bg_cover {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,1+0,1+40,0.8+60,0.8+100 */
+    background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.8) 60%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.8) 60%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#cc000000',GradientType=1 ); /* IE6-9 */
 
-    #major_name {
-        font-size: 32px;
-        margin-bottom: 24px;
-    }
+}
 
-    #major_departments {
-        font-size: 12px;
-        margin-bottom: 24px;
-    }
+#major_desc_cont {
+    width: 280px;
+}
 
-    #major_desc {
-        width: 280px;
-        font-size: 12px;
-        margin-bottom: 24px;
-    }
+#major_name {
+    font-size: 32px;
+    margin-bottom: 24px;
+}
 
-    #major_button_to_homepage {
-        width: 120px;
-        height: 36px;
-    }
+#major_departments {
+    font-size: 12px;
+    margin-bottom: 24px;
+}
 
-    #major_button_to_homepage img {
-        width: 20px;
-        height: 20px;
-        margin-right: 8px;
-    }
+#major_desc {
+    width: 280px;
+    font-size: 12px;
+    margin-bottom: 24px;
+}
 
-    #major_button_to_homepage h3 {
-        font-size: 12px;
-        line-height: 20px;
-    }
+#major_button_to_homepage {
+    width: 120px;
+    height: 36px;
+}
+
+#major_button_to_homepage img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+#major_button_to_homepage h3 {
+    font-size: 12px;
+    line-height: 20px;
 }

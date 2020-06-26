@@ -1,6 +1,6 @@
 const majorRequest = new XMLHttpRequest();
 
-const major_kind_list = document.getElementById("major_kind_wrapper").children;
+const major_kind_list = document.getElementById("major_kind_list").children;
 
 const major_desc_wrapper = document.getElementById("major_desc_wrapper");
 const major_detail_bg = document.getElementById("major_detail_bg");
@@ -63,14 +63,7 @@ function clickMajorKind(major_kind) {
             major_desc.textContent = major['desc'];
             major_homepage_address.href = major['homepage_address'];
 
-            // major_detail_bg.classList.add("showed");
-            // major_desc_wrapper.classList.add("showed");
-
-            // major_desc_wrapper.style.animation = 'major_desc_wrapper_change 1s';
-
             return;
         }
     });
-
-    // console.log(nav_link.dataset.id);
 }
