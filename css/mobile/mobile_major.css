@@ -5,15 +5,18 @@
 #major_kind_list li {
     width: 33.3%;
     font-size: 12px;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
 }
 
-#major_kind_list li:nth-child(3) {
-    display: block;
+#major_kind_list li:nth-child(4),
+#major_kind_list li:nth-child(5),
+#major_kind_list li:nth-child(6){
+    margin-bottom: 0px;
 }
 
 #major_kind_list li::before{
     height: 2px;
-    bottom: 14px;
 }
 
 #major_kind_list li.active::before {
@@ -55,7 +58,7 @@
 }
 
 #major_button_to_homepage {
-    width: 120px;
+    width: 132px;
     height: 36px;
 }
 
