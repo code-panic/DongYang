@@ -51,7 +51,7 @@ major_kind_list.forEach(major_kind => {
                 // });
                 
                 major_departments.textContent = major['departments'][0] + ", " + major['departments'][1]
-                if (major['departments'].length > 1) { 
+                if (major['departments'].length > 2) { 
                     major_departments.textContent += " 외 " + (major['departments'].length - 2) + "개 학과";
                 }
 
