@@ -11,7 +11,7 @@
             ]
         },  {
             "id": "robot",
-            "name": "로봇자동화공학부",
+            "name": "로봇자동공학부",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "homepage_address": "https://www.dongyang.ac.kr/web/fa",
             "departments": [
@@ -20,7 +20,7 @@
             ]
         },  {
             "id": "electric",
-            "name": "전기전자통신공학부",
+            "name": "전기전자공학부",
             "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
             "homepage_address": "https://www.dongyang.ac.kr/web/epower",
             "departments": [
