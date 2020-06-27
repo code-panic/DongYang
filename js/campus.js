@@ -38,8 +38,14 @@ const canvas_list = Array.from(campus_map_wrapper.children);
 function addCanvasImage(src) {
     /* 캔버스 태그 추가하기 */
     const canvas = document.createElement('canvas');
-    canvas.width = 800;
-    canvas.height = 448;
+    
+    if(isComputer) {
+        canvas.width = 800;
+        canvas.height = 448;
+    } else {
+        canvas.width = 280;
+        canvas.height = 156;
+    }
 
     campus_map_wrapper.appendChild(canvas);
 
