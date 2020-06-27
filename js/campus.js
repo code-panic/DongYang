@@ -135,46 +135,67 @@ campus_map_wrapper.onclick =  function(event) {
                     canvas.classList.remove('clicked');
                     canvas.classList.remove('clickedSurrounding');
 
-                    switch(element.dataset.id) {
-                        case "campus_building_2":
-                            if (canvas.dataset.id == "campus_building_1") {
-                                canvas.classList.add("clickedSurrounding");
-                            }
-                            break;
-                        case "campus_building_4":
-                            if (canvas.dataset.id == "campus_building_1") {
-                                canvas.classList.add("clickedSurrounding");
-                            }
-                            break;
-                        case "campus_building_6":
-                            if (canvas.dataset.id == "campus_building_4" || canvas.dataset.id == "campus_building_5") {
-                                canvas.classList.add("clickedSurrounding");
-                            }
-                            break;
-                        case "campus_building_7":
-                            if (canvas.dataset.id == "campus_building_5") {
-                                canvas.classList.add("clickedSurrounding");
-                            }
-                            break;
-                        case "campus_building_8":
-                            if (canvas.dataset.id == "campus_building_7") {
-                                canvas.classList.add("clickedSurrounding");
-                            }
-                            break;
-                        case "campus_building_9":
-                            campus_floor.classList.add("clickedSurrounding");
+                    // switch(element.dataset.id) {
+                    //     case "campus_building_2":
+                    //         if (canvas.dataset.id == "campus_building_1") {
+                    //             canvas.classList.add("clickedSurrounding");
+                    //         }
+                    //         break;
+                    //     case "campus_building_4":
+                    //         if (canvas.dataset.id == "campus_building_1") {
+                    //             canvas.classList.add("clickedSurrounding");
+                    //         }
+                    //         break;
+                    //     case "campus_building_6":
+                    //         if (canvas.dataset.id == "campus_building_4" || canvas.dataset.id == "campus_building_5") {
+                    //             canvas.classList.add("clickedSurrounding");
+                    //         }
+                    //         break;
+                    //     case "campus_building_7":
+                    //         if (canvas.dataset.id == "campus_building_5") {
+                    //             canvas.classList.add("clickedSurrounding");
+                    //         }
+                    //         break;
+                    //     case "campus_building_8":
+                    //         if (canvas.dataset.id == "campus_building_7") {
+                    //             canvas.classList.add("clickedSurrounding");
+                    //         }
+                    //         break;
+                    //     case "campus_building_9":
+                    //         campus_floor.classList.add("clickedSurrounding");
 
-                            if (canvas.dataset.id == "campus_building_5") {
-                                canvas.classList.add("clickedSurrounding");
-                            }
-                            break;
-                    }
+                    //         if (canvas.dataset.id == "campus_building_5") {
+                    //             canvas.classList.add("clickedSurrounding");
+                    //         }
+                    //         break;
+                    // }
                 });
 
-
-                
                 element.classList.remove('hover');
                 element.classList.add('clicked');
+
+                switch(element.dataset.id) {
+                    case "campus_building_2":
+                        addClassByDataId("campus_building_1", "clickedSurrounding");
+                        break;
+                    case "campus_building_4":
+                        addClassByDataId("campus_building_1", "clickedSurrounding");
+                        break;
+                    case "campus_building_6":
+                        addClassByDataId("campus_building_4", "clickedSurrounding");
+                        addClassByDataId("campus_building_5", "clickedSurrounding");
+                        break;
+                    case "campus_building_7":
+                        addClassByDataId("campus_building_5", "clickedSurrounding");
+                        break;
+                    case "campus_building_8":
+                        addClassByDataId("campus_building_7", "clickedSurrounding");
+                        break;
+                    case "campus_building_9":
+                        campus_floor.classList.add("clickedSurrounding");
+                        addClassByDataId("campus_building_5", "clickedSurrounding");
+                        break;
+                }
 
                 campus_building_desc_cont.style.animation = 'none';
 
@@ -205,3 +226,8 @@ campus_map_wrapper.onclick =  function(event) {
         }
     });
 };
+
+/* */
+function addClassByDataId(data_id, class_name) {
+    document.querySelector("[data-id='" + data_id + "']").classList.add(class_name);
+}
