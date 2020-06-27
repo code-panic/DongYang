@@ -1,4 +1,9 @@
+footer {
+    height: 64px;
+    margin-bottom: 24px;
+}
+
 footer > h3 {
     width: 280px;
-    font-size: 6px;
+    font-size: 8px;
 }

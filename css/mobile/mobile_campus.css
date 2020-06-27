@@ -1,10 +1,5 @@
 #campus {
-    height: 800px;
-}
-
-#campus_map_wrapper {
-    /* 나중에 고치자 */
-    height: 204px;
+    height: 720px;
 }
 
 #campus > div{
@@ -12,9 +7,18 @@
     display: block;
 }
 
+#campus_map_wrapper {
+    height: 156.8px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+
 #campus_map_wrapper > canvas {
-    width: 280px;
-    margin: 24px 0px;
+    width: 100%;
+}
+
+#campus_building_desc_cont {
+    width: 100%;
 }
 
 #campus_building_name {

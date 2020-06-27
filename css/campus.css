@@ -7,17 +7,18 @@
     width: 1408px;
     margin: 0 auto;
     display: flex;
+    flex-flow: row wrap;
 }
 
 #campus_map_wrapper {
     position: relative;
     flex:1;
+    margin-top: 96px;
 }
 
 #campus_map_wrapper > canvas {
     position: absolute;
     width: 800PX;
-    margin-top: 96px;
     filter: brightness(70%);
     transition: all 1s;
 }

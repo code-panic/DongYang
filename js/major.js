@@ -45,10 +45,6 @@ major_kind_list.forEach(major_kind => {
                 console.log(major_detail_bg.src);
     
                 major_name.textContent = major['name'];
-                //major_departments.textContent = "";
-                // major['departments'].forEach(major_department => {
-                //     major_departments.textContent += major_department + " ";
-                // });
                 
                 major_departments.textContent = major['departments'][0] + ", " + major['departments'][1]
                 if (major['departments'].length > 2) { 
