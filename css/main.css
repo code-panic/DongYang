@@ -120,6 +120,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66141414', e
     background-color: #ffffff;
     cursor: pointer;
     margin-right: 16px;
+    user-select: none;
     transition: background-color 0.5s;
 }
 
