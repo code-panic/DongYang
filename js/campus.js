@@ -35,6 +35,8 @@ addCanvasImage('./img/campus_building_1.png');
 
 const canvas_list = Array.from(campus_map_wrapper.children);
 
+console.log(document.querySelector("[data-id='campus_building_1']"));
+
 function addCanvasImage(src) {
     /* 캔버스 태그 추가하기 */
     const canvas = document.createElement('canvas');
@@ -133,34 +135,6 @@ campus_map_wrapper.onclick =  function(event) {
                     canvas.classList.remove('clicked');
                     canvas.classList.remove('clickedSurrounding');
 
-                    // if (element.dataset.id == "campus_building_2") {
-                    //     if (canvas.dataset.id == "campus_building_1") {
-                    //         canvas.classList.add("clickedSurrounding");
-                    //     }
-                    // } else if (element.dataset.id == "campus_building_4") {
-                    //     if (canvas.dataset.id == "campus_building_1") {
-                    //         canvas.classList.add("clickedSurrounding");
-                    //     }
-                    // } else if (element.dataset.id == "campus_building_6") {
-                    //     if (canvas.dataset.id == "campus_building_4" || canvas.dataset.id == "campus_building_5") {
-                    //         canvas.classList.add("clickedSurrounding");
-                    //     }
-                    // } else if (element.dataset.id == "campus_building_7") {
-                    //     if (canvas.dataset.id == "campus_building_5") {
-                    //         canvas.classList.add("clickedSurrounding");
-                    //     }
-                    // } else if (element.dataset.id == "campus_building_8") {
-                    //     if (canvas.dataset.id == "campus_building_7") {
-                    //         canvas.classList.add("clickedSurrounding");
-                    //     }
-                    // } else if (element.dataset.id == "campus_building_9") {
-                    //     campus_floor.classList.add("clickedSurrounding");
-
-                    //     if (canvas.dataset.id == "campus_building_5") {
-                    //         canvas.classList.add("clickedSurrounding");
-                    //     }
-                    // }
-
                     switch(element.dataset.id) {
                         case "campus_building_2":
                             if (canvas.dataset.id == "campus_building_1") {
@@ -196,6 +170,8 @@ campus_map_wrapper.onclick =  function(event) {
                             break;
                     }
                 });
+
+
                 
                 element.classList.remove('hover');
                 element.classList.add('clicked');
