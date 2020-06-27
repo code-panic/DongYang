@@ -35,8 +35,6 @@ addCanvasImage('./img/campus_building_1.png');
 
 const canvas_list = Array.from(campus_map_wrapper.children);
 
-console.log(document.querySelector("[data-id='campus_building_1']"));
-
 function addCanvasImage(src) {
     /* 캔버스 태그 추가하기 */
     const canvas = document.createElement('canvas');
@@ -72,53 +70,82 @@ campus_map_wrapper.addEventListener('mousemove', function(event) {
         if(element.tagName == "CANVAS") {
             const pixelData = element.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;
             
-            if (pixelData[3] != 0 
-                    && !element.classList.contains('clicked') 
+            if (pixelData[3] != 0 && !element.classList.contains('clicked') 
                     && element.dataset.id != "campus_floor") {
 
                 canvas_list.forEach(canvas => {
                     canvas.classList.remove('hover');
-                    campus_floor.classList.remove('hoverSurrounding');
                     canvas.classList.remove('hoverSurrounding');
 
-                    if (element.dataset.id == "campus_building_2") {
-                        if (canvas.dataset.id == "campus_building_1" && !canvas.classList.contains("clicked")) {
-                            canvas.classList.add("hoverSurrounding");
-                        }
-                    } else if (element.dataset.id == "campus_building_4") {
-                        if (canvas.dataset.id == "campus_building_1" && !canvas.classList.contains("clicked")) {
-                            canvas.classList.add("hoverSurrounding");
-                        }
-                    } else if (element.dataset.id == "campus_building_6") {
-                        if ((canvas.dataset.id == "campus_building_4" || canvas.dataset.id == "campus_building_5") 
-                                && !canvas.classList.contains("clicked")) {
-                            canvas.classList.add("hoverSurrounding");
-                        }
-                    } else if (element.dataset.id == "campus_building_7") {
-                        if (canvas.dataset.id == "campus_building_5"  && !canvas.classList.contains("clicked")) {
-                            canvas.classList.add("hoverSurrounding");
-                        }
-                    } else if (element.dataset.id == "campus_building_8") {
-                        if (canvas.dataset.id == "campus_building_7"  && !canvas.classList.contains("clicked")) {
-                            canvas.classList.add("hoverSurrounding");
-                        }
-                    } else if (element.dataset.id == "campus_building_9") {
-                        campus_floor.classList.add("hoverSurrounding");
+                    // if (element.dataset.id == "campus_building_2") {
+                    //     if (canvas.dataset.id == "campus_building_1" && !canvas.classList.contains("clicked")) {
+                    //         canvas.classList.add("hoverSurrounding");
+                    //     }
+                    // } else if (element.dataset.id == "campus_building_4") {
+                    //     if (canvas.dataset.id == "campus_building_1" && !canvas.classList.contains("clicked")) {
+                    //         canvas.classList.add("hoverSurrounding");
+                    //     }
+                    // } else if (element.dataset.id == "campus_building_6") {
+                    //     if ((canvas.dataset.id == "campus_building_4" || canvas.dataset.id == "campus_building_5") 
+                    //             && !canvas.classList.contains("clicked")) {
+                    //         canvas.classList.add("hoverSurrounding");
+                    //     }
+                    // } else if (element.dataset.id == "campus_building_7") {
+                    //     if (canvas.dataset.id == "campus_building_5"  && !canvas.classList.contains("clicked")) {
+                    //         canvas.classList.add("hoverSurrounding");
+                    //     }
+                    // } else if (element.dataset.id == "campus_building_8") {
+                    //     if (canvas.dataset.id == "campus_building_7"  && !canvas.classList.contains("clicked")) {
+                    //         canvas.classList.add("hoverSurrounding");
+                    //     }
+                    // } else if (element.dataset.id == "campus_building_9") {
+                    //     campus_floor.classList.add("hoverSurrounding");
 
-                        if (canvas.dataset.id == "campus_building_5"  && !canvas.classList.contains("clicked")) {
-                            canvas.classList.add("hoverSurrounding");
-                        }
-                    }
+                    //     if (canvas.dataset.id == "campus_building_5"  && !canvas.classList.contains("clicked")) {
+                    //         canvas.classList.add("hoverSurrounding");
+                    //     }
+                    // }
                 });
 
+                campus_floor.classList.remove('hoverSurrounding');
+
                 element.classList.add('hover');
+
+                /* 호버한 건물을 가리는 건물을 반투명화하기 */
+                switch(element.dataset.id) {
+                    case "campus_building_2":
+                        addClassByDataId("campus_building_1", "hoverSurrounding", "clicked");
+                        break;
+                    case "campus_building_4":
+                        addClassByDataId("campus_building_1", "hoverSurrounding", "clicked");
+                        break;
+                    case "campus_building_6":
+                        addClassByDataId("campus_building_4", "hoverSurrounding", "clicked");
+                        addClassByDataId("campus_building_5", "hoverSurrounding", "clicked");
+                        break;
+                    case "campus_building_7":
+                        addClassByDataId("campus_building_5", "hoverSurrounding", "clicked");
+                        break;
+                    case "campus_building_8":
+                        addClassByDataId("campus_building_7", "hoverSurrounding", "clicked");
+                        break;
+                    case "campus_building_9":
+                        campus_floor.classList.add("hoverSurrounding");
+                        addClassByDataId("campus_building_5", "hoverSurrounding", "clicked");
+                        break;
+                }
+
+                return;
 
             }
         }
     });
 });
 
-//mouse 클릭 애니메이션 처리하기 
+/* 
+클릭한 위치에 겹치는 모든 태그들 중에서 캔버스 태그만을 고르고 
+그 중에서 클릭한 위치에 투명하지 않은(건물이미지가 있는) 그림을 선택
+*/
 campus_map_wrapper.onclick =  function(event) {
     const elements = document.elementsFromPoint(event.clientX, event.clientY);
 
@@ -126,54 +153,21 @@ campus_map_wrapper.onclick =  function(event) {
         if(element.tagName == "CANVAS") {
             const pixelData = element.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;
             
-            if (pixelData[3] != 0 
-                    && element.dataset.id != "campus_floor") {
-                
-                campus_floor.classList.remove('clickedSurrounding');
-
+            if (pixelData[3] != 0 && element.dataset.id != "campus_floor") {
+                /* 관련된 클래스를 모두 리셋하기 */
                 canvas_list.forEach(canvas => {
+                    canvas.classList.remove('hover');
+                    canvas.classList.remove('hoverSurrounding');
                     canvas.classList.remove('clicked');
                     canvas.classList.remove('clickedSurrounding');
-
-                    // switch(element.dataset.id) {
-                    //     case "campus_building_2":
-                    //         if (canvas.dataset.id == "campus_building_1") {
-                    //             canvas.classList.add("clickedSurrounding");
-                    //         }
-                    //         break;
-                    //     case "campus_building_4":
-                    //         if (canvas.dataset.id == "campus_building_1") {
-                    //             canvas.classList.add("clickedSurrounding");
-                    //         }
-                    //         break;
-                    //     case "campus_building_6":
-                    //         if (canvas.dataset.id == "campus_building_4" || canvas.dataset.id == "campus_building_5") {
-                    //             canvas.classList.add("clickedSurrounding");
-                    //         }
-                    //         break;
-                    //     case "campus_building_7":
-                    //         if (canvas.dataset.id == "campus_building_5") {
-                    //             canvas.classList.add("clickedSurrounding");
-                    //         }
-                    //         break;
-                    //     case "campus_building_8":
-                    //         if (canvas.dataset.id == "campus_building_7") {
-                    //             canvas.classList.add("clickedSurrounding");
-                    //         }
-                    //         break;
-                    //     case "campus_building_9":
-                    //         campus_floor.classList.add("clickedSurrounding");
-
-                    //         if (canvas.dataset.id == "campus_building_5") {
-                    //             canvas.classList.add("clickedSurrounding");
-                    //         }
-                    //         break;
-                    // }
                 });
 
-                element.classList.remove('hover');
+                campus_floor.classList.remove('clickedSurrounding');
+
+                /* 클릭한 건물 투명도 없애기 */
                 element.classList.add('clicked');
 
+                /* 클릭한 건물을 가리는 건물을 반투명화하기 */
                 switch(element.dataset.id) {
                     case "campus_building_2":
                         addClassByDataId("campus_building_1", "clickedSurrounding");
@@ -213,7 +207,7 @@ campus_map_wrapper.onclick =  function(event) {
                         let tmp_html = '';
 
                         building['floors'].forEach(floor => {
-                            tmp_html += "<tr><td class=floor>" + floor['name'] + "</td><td>" + floor['desc'] + "</td></tr>" 
+                            tmp_html += "<tr><td class=floor>" + floor['name'] + "</td><td>" + floor['desc'] + "</td></tr>";
                         });
 
                         campus_building_floors.innerHTML = tmp_html;
@@ -221,13 +215,20 @@ campus_map_wrapper.onclick =  function(event) {
                         return;
                     }
                 });
-                
             }
         }
     });
 };
 
-/* */
-function addClassByDataId(data_id, class_name) {
-    document.querySelector("[data-id='" + data_id + "']").classList.add(class_name);
+/* data-id로 검색한 태그에 클래스를 더해준다 */
+function addClassByDataId(data_id, class_add) {
+    document.querySelector("[data-id='" + data_id + "']").classList.add(class_add);
+}
+
+function addClassByDataId(data_id, class_add, class_avoid) {
+    const element = document.querySelector("[data-id='" + data_id + "']");
+
+    if (!element.classList.contains(class_avoid)) {
+        element.classList.add(class_add);   
+    }
 }
