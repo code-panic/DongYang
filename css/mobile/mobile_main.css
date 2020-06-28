@@ -11,6 +11,10 @@
     margin-bottom: 24px;
 }
 
+#main_logo.smaller {
+    height: 54px;
+}
+
 #main_top {
     margin-bottom: 24px;
 }

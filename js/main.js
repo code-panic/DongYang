@@ -32,17 +32,11 @@ play_interval_id = setInterval(function() {
 /* 5초마다 동영상 재생 상황을 파악해 자세한 설명을 보일지 결정한다 */
 desc_interval_id = setInterval(function() {
     if (isPlaying) {
-        if (isComputer) {
-            main_logo.classList.add("smaller")
-        }
-
+        main_logo.classList.add("smaller")
         main_desc_wrapper.classList.add("invisiable");
 
     } else if (!isPlaying) {
-        if (isComputer) {
-            main_logo.classList.remove("smaller")
-        }
-
+        main_logo.classList.remove("smaller")
         main_desc_wrapper.classList.remove("invisiable");
     }
 }, 5000);

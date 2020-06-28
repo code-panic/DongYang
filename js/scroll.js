@@ -54,7 +54,7 @@ window.onscroll = function() {
     
 }
 
-/* interval 함수가 제대로 꺼지지 않는 것 같다 */
+/* interval 함수가 화면 밖으로 나갈 때 한 번 더 실행되는 것 같다 */
 function animatePromoNumber(element, intervalId, isInvisiable, endNumber) {
     const rect = element.getBoundingClientRect();
 
@@ -69,7 +69,7 @@ function animatePromoNumber(element, intervalId, isInvisiable, endNumber) {
                         clearInterval(intervalId);
                     }
                 },120);
-            },1000);
+            },500);
 
             isInvisiable = false;
         }

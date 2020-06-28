@@ -71,7 +71,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66141414', e
     display: block;
     height: 144px;
     margin-bottom: 48px;
-    transition: height 0.5s;
+    transition: height 1s;
 }
 
 #main_logo.smaller {
