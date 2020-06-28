@@ -27,7 +27,7 @@ window.onscroll = function() {
         nav.classList.remove("scrolled");
     }
 
-    removeNavActiveAll();
+    removeNavClassAll();
 
     /* 네비게이션 하이라이트 처리 */
     if (window.scrollY <= main_offsetTop) {

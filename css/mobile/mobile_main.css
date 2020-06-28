@@ -35,6 +35,8 @@
     width: 96px;
     height: 36px;
     margin-right: 8px;
+    
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -53,6 +55,8 @@
 #main_button_to_onlineclass {
     width: 120px;
     height: 36px;
+    
+    -webkit-tap-highlight-color: transparent;
 }
 
 #main_button_to_onlineclass img {

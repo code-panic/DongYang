@@ -13,4 +13,6 @@ nav > div{
 #nav_links li {
     margin-left: 16px;
     font-size: 8px;
+    
+    -webkit-tap-highlight-color: transparent;
 }

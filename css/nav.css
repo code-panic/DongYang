@@ -47,7 +47,6 @@ nav > div {
     font-size: 16px;
     font-weight: normal;
     opacity: 100%;
-    user-select: none;
     transition: opacity 0.5s;
 }
 
