@@ -77,8 +77,6 @@ function animatePromoNumber(element, intervalId, isInvisiable, endNumber) {
         isInvisiable = true;
         element.textContent = 0;
     }
-
-
 }
 
 function lerp (start, end, step) {
